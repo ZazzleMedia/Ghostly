@@ -1,0 +1,35 @@
+/*===============================================//
+	OBJECT ABSTRACTIONS -
+	These will be made in less but pop them into 
+	classes if you need to use them
+//==============================================*/
+
+.media-object() { //This is a vey abstract module for common media - profile, comments, status updates
+	
+	.media-img {
+		float: left;
+		margin-right: @gutter;
+
+		img{
+			display: block;
+		}
+	}
+
+	.media-body {
+		.clearfix();
+	}
+}
+
+.flag-object() {
+	display: table;
+	width: 100%;
+
+	.flag-img, .flag-body {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.flag-body {
+
+	}
+}

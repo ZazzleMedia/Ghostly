@@ -1,0 +1,229 @@
+@import "ghostly/ghostly.less"; //Import the Ghostly Framework
+
+.wrapper {
+  .columns(10);
+  .push(1);
+}
+
+.row {
+  .clearfix();
+}
+
+.main {
+  .columns(9);
+}
+
+.sidebar {
+  margin-top: 27px;
+  .columns(3);
+  .gutter();
+}
+
+.box {
+  .third();
+  .gutter();
+}
+
+.full {
+  .full();
+  .gutter();
+}
+
+.half {
+  .half();
+  .gutter();
+  padding-bottom: 24px;
+}
+
+.third {
+  .third();
+  .gutter();
+  padding-bottom: 24px;
+}
+
+//Color Pallette Example
+
+.pallette {
+  .columns(8);
+  .gutter();
+  .clearfix();
+  .push(2);
+  padding-bottom: 24px;
+}
+
+.colour-block {
+  width: 100%/5;
+  padding-top: 100%/5;
+  float:left;
+}
+
+.light {
+  background: @lighter;
+}
+
+.lighter {
+  background: @light;
+}
+
+.blue {
+  background: @base;
+}
+
+.dark {
+  background: @dark;
+}
+
+.darker {
+  background: @darker;
+}
+
+//Table Examples
+
+.striped {
+  .striped(odd);
+}
+
+.classic {
+  .classic();
+}
+
+.classic-horizontal {
+  .classic-horizontal();
+}
+
+.contrast {
+  .contrast();
+  .equal(4);
+}
+
+.pricing {
+  .pricing();
+  .equal(4);
+}
+
+//Form Examples
+
+.input-icon {
+  .input-group-icon();
+}
+
+.input-button {
+  .input-group-button();
+}
+
+.vertical {
+  .vertical-form(); // this sets everything to block and width 100%
+}
+
+.horizontal {
+  .horizontal-form(); // this is dependant upon a form-group element that acts like a row, then the label and inputs are set using columns
+}
+
+.inline {
+  .input-icon {
+    .columns(4);
+    margin: 0 @gutter;
+  }
+}
+
+//Button Examples
+
+.default-button {
+  .button();
+  .button-size();
+}
+
+.primary-button {
+  .button(primary);
+  .button-size();
+}
+
+.secondary-button {
+  .button(secondary);
+  .button-size();
+}
+
+.cancel-button {
+  .button(cancel);
+  .button-size();
+}
+
+.button-small {
+  .button(primary);
+  .button-size(small);
+}
+
+.button-normal {
+  .button(primary);
+  .button-size(normal);
+}
+
+.button-large {
+  .button(primary);
+  .button-size(large);
+}
+
+.button-third {
+  .button(primary);
+  .button-size();
+  .button-width(4);
+  margin: @gutter;
+}
+
+.button-half {
+  .button(primary);
+  .button-size();
+  .button-width(6);
+  margin: @gutter;
+}
+
+.button-three-quarters {
+  .button(primary);
+  .button-size();
+  .button-width(9);
+  margin: @gutter;
+}
+
+.button-dropdown {
+  .button-dropdown();
+  ul {
+    .columns(6);
+  }
+}
+
+.button-group {
+  margin:@gutter;
+  .clearfix();
+  .button-group();
+
+  ul {
+    .columns(24);
+  }
+}
+
+//Navigation Examples
+
+.inline-nav {
+  .inline-nav();
+}
+
+.block-nav {
+  .block-nav();
+}
+
+.nav-bar {
+  .nav-bar();
+}
+
+.menu-block {
+  .menu-block(6);
+  li {
+      a {
+        text-align:center;
+      }
+  }
+}
+
+.nav-tabs {
+  .nav-tabs();
+}

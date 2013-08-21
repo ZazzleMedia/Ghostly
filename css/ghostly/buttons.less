@@ -1,0 +1,222 @@
+/*========================================//
+	BUTTON STYLES
+//========================================*/
+
+@buttonDefaultColour: #666;
+@buttonDefaultColourHover: lighten(@buttonDefaultColour, 20%);
+
+@buttonPrimaryColour: @base;
+@buttonPrimaryColourHover: lighten(@buttonPrimaryColour, 10%);
+
+@buttonSecondaryColour: #333;
+@buttonSecondaryColourHover: lighten(@buttonSecondaryColour, 20%);
+
+@buttonCancelColour: #DF151A;
+@buttonCancelColourHover: lighten(@buttonCancelColour, 20%);
+
+.button() { // A button building block mixin that simply makes a button
+	display: inline-block;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 0 0 0 0;
+	border:1px solid transparent;
+}
+
+.button(@type) when (@type = default) {
+	display: inline-block;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 0 0 0 0;
+	border:1px solid @buttonDefaultColour;
+	color: #fff;
+	background: @buttonDefaultColour;
+	-webkit-appearance: none;
+	font-weight: normal;
+	font-family: @baseFontFamily;
+	cursor: pointer;
+
+	&:hover {
+		background: @buttonDefaultColourHover;
+		border: 1px solid @buttonDefaultColourHover;
+	}
+
+	&:visited {
+		color: #fff;
+	}
+
+	i {
+		line-height: 1.5em;
+	}
+}
+
+.button (@type) when (@type = primary) {
+	display: inline-block;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 0 0 0 0;
+	border:1px solid @buttonPrimaryColour;
+	color: #fff;
+	background: @buttonPrimaryColour;
+	-webkit-appearance: none;
+	font-weight: normal;
+	font-family: @baseFontFamily;
+	cursor: pointer;
+
+	&:hover {
+		background: @buttonPrimaryColourHover;
+		border: 1px solid @buttonPrimaryColourHover;
+	}
+
+	&:visited {
+		color: #fff;
+	}
+
+	i {
+		line-height: 1.5em;
+	}
+}
+
+.button (@type) when (@type = secondary) {
+	display: inline-block;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 0 0 0 0;
+	border:1px solid @buttonSecondaryColour;
+	color: #fff;
+	background: @buttonSecondaryColour;
+	-webkit-appearance: none;
+	font-weight: normal;
+	font-family: @baseFontFamily;
+	cursor: pointer;
+
+	&:hover {
+		background: @buttonSecondaryColourHover;
+		border: 1px solid @buttonSecondaryColourHover;
+	}
+
+	&:visited {
+		color: #fff;
+	}
+
+	i {
+		line-height: 1.5em;
+	}
+}
+
+.button (@type) when (@type = cancel) {
+	display: inline-block;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 0 0 0 0;
+	border:1px solid @buttonCancelColour;
+	color: #fff;
+	background: @buttonCancelColour;
+	-webkit-appearance: none;
+	font-weight: normal;
+	font-family: @baseFontFamily;
+	cursor: pointer;
+
+	&:hover {
+		background: @buttonCancelColourHover;
+		border: 1px solid @buttonCancelColourHover;
+	}
+
+	&:visited {
+		color: #fff;
+	}
+
+	i {
+		line-height: 1.5em;
+	}
+}
+
+.button-size(@size) when (@size = small) {
+	font-size: @baseFontSize - 4;
+	padding: @gutter;
+}
+
+.button-size(@size: normal) when (@size = normal) { //normal size
+	font-size: @baseFontSize;
+	padding: @gutter @gutter*2;
+}
+
+.button-size(@size) when (@size = large) { //large Size
+	font-size: @baseFontSize + 4;
+	padding: @gutter @gutter*2;
+}
+
+.button-width(@cols) {
+	display: block;
+	float: left;
+	.columns(@cols);
+}
+
+.button-dropdown() {
+	position: relative;
+	.button {
+    position: relative;
+    &:after {
+      display: inline-block;
+      font-family: FontAwesome;
+      content:"\f0d7";
+      margin-left: @gutter;
+      position: relative;
+      top:2px;
+    }
+  }
+
+  ul {
+  	margin:0 0 0 0;
+  	padding: 0 0 0 0;
+  	position: absolute;
+  	top:80%;
+  	border: 1px solid #eee;
+  	opacity:0;
+  	display: none;
+  	.transition(all 0.8s);
+  	background: #fff;
+  	z-index:1000;
+  	li {
+  		list-style-type: none;
+
+  	&.divider {
+  		border-top:1px solid #eee;
+  		border-bottom: 1px solid #eee;
+  		margin: @gutter/2 0;
+  	}
+
+  		a {
+  			display: block;
+  			width: 100%;
+  			height: 100%;
+  			color: #666;
+  			.border-box();
+  			padding: @gutter;
+  			border-top: 1px solid transparent;
+  			border-bottom: 1px solid transparent;
+
+  			&:hover {
+				border-top: 1px solid #666;
+				border-bottom: 1px solid #666;
+				background: #666;
+				color: #fff;
+  			}
+  		}
+  	}
+  }
+
+  &.active {
+	ul {
+		opacity:1;
+		display: block;
+		top: 100%;
+	}
+  }
+}
+
+.button-group() {
+	
+	> .button, > .button-dropdown, > .button-group {
+		float: left;
+	}
+}

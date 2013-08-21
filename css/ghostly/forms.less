@@ -1,0 +1,169 @@
+/*===============================================//
+	STYLINGS FOR FORM ELEMENTS
+//==============================================*/
+@import "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css";
+input, label, textarea {
+	font-size: @baseFontSize;
+	font-family: @baseFontFamily;
+	margin:0 0 0 0;
+	.border-box();
+}
+
+input[type="text"],input[type="tel"],input[type="search"], input[type="email"], input[type="password"], textarea {
+	padding: @gutter;
+	border: 1px solid #ddd;
+	color: #444;
+	outline: none;
+	line-height: 1.5em;
+	&:focus {
+		border: 1px solid @base;
+	}
+}
+
+textarea {
+
+}
+
+input[type="submit"], button {
+	.button(primary);
+	.button-size();
+	.transition(all 0.3s);
+}
+
+label {
+	padding: @gutter (@gutter*2);
+}
+
+input[type="checkbox"], input[type="radio"]{
+	margin-right: 5px;
+}
+
+select {
+	padding: @gutter;
+	margin: 0 5px 0 0;
+	color: @baseColor;
+	position: relative;
+	top:-1px;
+}
+
+
+//stylings for inputs
+.input-group-button(@buttonLength: auto; @inputLength: auto; @float: left) {
+	.border-box();
+	.clearfix();
+	input, {
+		float:left;
+		display: block;
+	}
+
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"] {
+		.columns(@inputLength);
+	}
+
+	input[type="submit"] {
+		.columns(@buttonLength);
+		float: @float;
+	}
+}
+
+.input-group-icon() {
+	.clearfix();
+	position: relative;
+	width: 100%;
+	input, span {
+		float:left;
+		display: block;
+	}
+
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], input[type="password"], textarea {
+		width: 100%;
+		padding-left: (@gutter*2)+5+@baseFontSize;
+
+		&:focus ~ span i {
+			color: @base;
+		}
+	}
+
+	span {
+		text-align:center;
+		padding: (@gutter+4) (@gutter+5);
+		position: absolute;
+		top:0;
+		left:0;
+	}
+}
+	
+//Stylings for forms
+
+.vertical-form() {
+	label, input, textarea {
+		display: block;
+		width: 100%;
+	}
+
+	label {
+		padding-left:0;
+	}
+
+	input {
+		margin-bottom: 10px;
+	}
+
+	input[type="submit"] {
+		margin-top: @baseFontSize*1.5;
+		display:inline-block;
+		width:auto;
+	}
+
+	textarea {
+		max-width: 100%;
+	}
+
+}
+
+.horizontal-form() {
+	.form-group {
+		display: block;
+		width: 100%;
+		.clearfix();
+		margin: @baseFontSize*1.5 0;
+	}
+
+	label {
+		.columns(3);
+		text-align: right;
+		padding: @gutter+5 @gutter*2;
+	}
+
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], .input-icon, textarea {
+		.columns(9);
+	}
+
+	.input-icon {
+		input[type="text"],input[type="tel"],input[type="search"], input[type="email"], textarea {
+			width: 100%;
+		}
+	}
+
+	input[type="submit"] {
+		.push(3);
+	}
+}
+
+//Validation Styles
+
+.has-error() {
+	
+}
+
+.has-success() {
+
+}
+
+.has-warning() {
+
+}
+
+
+
+

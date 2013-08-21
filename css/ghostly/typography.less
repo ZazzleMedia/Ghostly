@@ -1,0 +1,106 @@
+/*==============================================//
+  TYPOGRAPHIC STYLES - Use the settings to quickly 
+  change the font styles and colours
+//==============================================*/
+
+/*---------------Typography Configs--------------------*/
+
+@baseFontFamily: "source-sans-pro", sans-serif;
+@baseFontSize: 16px;
+@baseLineHeight: 1.5em;
+@baseColor: #666;
+
+@headingsFontFamily: "source-sans-pro", sans-serif;
+@headingsColor: #444;
+@headingsWeight: 600;
+
+/*---------------End of Config--------------------*/
+
+
+img {
+    max-width:100%;
+  }
+
+  html {
+    font-size: 62.5%;
+    line-height: 1.5em;
+    color: #666;
+  }
+  
+  body {
+    font-family: @baseFontFamily;
+    font-size: @baseFontSize;
+    color: @baseColor;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  p {
+    line-height: 1.5em;
+    font-weight:400;
+    margin: (@baseFontSize*1.5) 0;
+    padding: 0 0 0 0;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: @headingsWeight;
+    color: @headingsColor;
+    line-height: @baseLineHeight;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  h1 {
+    font-size: 3.157em;
+    line-height: 1em;
+    margin: 1.5em/3.157em 0;
+  }
+
+  h2 {
+    font-size: 2.369em;
+    line-height: 1.5em/2.369em;
+    margin: 1.5em/2.369em 0;
+  }
+
+  h3 {
+    font-size: 1.777em;
+    line-height: 1.5em/1.777em;
+    margin: 1.5em/1.777em 0;
+  }
+
+  h4 {
+    font-size: 1.333em;
+    line-height: 1.5em/1.333em;
+    margin: 1.5em/1.333em 0;
+  }
+
+  h5 {
+    font-size: @baseFontSize + 2;
+    line-height: 1.125em;
+    margin-bottom: 1.125em;
+  }
+
+  h6 {
+    font-size: @baseFontSize;
+    line-height: 1.125em;
+    margin-bottom: 1.125em;
+  }
+
+  blockquote {
+    border-left: 5px solid @base;
+    padding-left: 20px;
+  }
+
+  cite {
+    font-size: 0.8em;
+    color: #777;
+  }
+
+  ul, ol {
+    margin: 0 25px;
+    padding: 0 (@baseFontSize*1.5);
+  }
+
+  li {
+    line-height: 1.5em;
+  }

@@ -1,0 +1,28 @@
+/*===============================================//
+	STYLINGS FOR LINKS
+//==============================================*/
+
+@linkColor: @light;
+@linkHover: @base;
+@visitedColor: @dark;
+@activeColor: @lighter;
+
+a {
+    text-decoration: none;
+    color: @linkColor;
+    .transition(all 0.3s);
+
+    &:visited {
+		color: @visitedColor;
+    }
+
+    &:hover {
+		color: #fff;
+		background: @linkHover;
+    }
+
+    &:active {
+    	color:#fff;
+		background: @activeColor;
+    }
+  }

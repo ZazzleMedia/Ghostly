@@ -1,0 +1,103 @@
+/*========================================//
+	NAVIGATION STYLES
+//========================================*/
+
+.nav() {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	.clearfix();
+
+	> li {
+		list-style-type: none;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+
+		a {
+			display: block;
+		}
+	}
+}
+
+
+.inline-nav() {
+	.nav();	
+	 > li {
+		float:left;
+		a {
+			padding: @gutter;
+			.border-box();
+		}
+	}
+}
+
+.block-nav() {
+	.nav();
+	> li {
+
+		a {
+			padding: @gutter;
+			.border-box();
+		}
+	}
+}
+
+.nav-bar() {
+	.inline-nav();
+	background: #eee;
+	> li {
+
+		a {
+			text-align: center;
+			color: #666;
+			padding: @gutter @gutter*2;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.nav-tabs() {
+	.inline-nav();
+	border-bottom: 1px solid #ccc;
+	.button-dropdown {
+		top:1px;
+		ul {
+			.columns(24);
+		}
+	}
+	> li {
+		border: 1px solid transparent;
+		border-bottom: 1px solid #ccc;
+		margin: 0 3px;
+		position: relative;
+		top: 2px;
+
+		a {
+			padding: @gutter @gutter*2;
+		}
+
+		&.active {
+			color: #666;
+			border: 1px solid #ccc;
+			border-bottom: 1px solid #fff;
+		}
+	}
+}
+
+.menu-block(@cols: 12) {
+	.block-nav();
+	.columns(@cols);
+	background: #eee;
+
+	> li {
+		a {
+			color: #666;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
