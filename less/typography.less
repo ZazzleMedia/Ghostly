@@ -9,10 +9,11 @@
 @baseFontSize: 16px;
 @baseLineHeight: 1.5em;
 @baseColor: #666;
+@baseFontWeight: 300;
 
 @headingsFontFamily: "source-sans-pro", sans-serif;
 @headingsColor: #444;
-@headingsWeight: 600;
+@headingsWeight: 400;
 
 /*---------------End of Config--------------------*/
 
@@ -31,13 +32,14 @@ img {
     font-family: @baseFontFamily;
     font-size: @baseFontSize;
     color: @baseColor;
+    font-weight: @baseFontWeight;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
   }
 
   p {
     line-height: 1.5em;
-    font-weight:400;
+    font-weight: @baseFontWeight;
     margin: (@baseFontSize*1.5) 0;
     padding: 0 0 0 0;
   }

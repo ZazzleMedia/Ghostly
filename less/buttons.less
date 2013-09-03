@@ -8,7 +8,7 @@
 @buttonPrimaryColour: @base;
 @buttonPrimaryColourHover: lighten(@buttonPrimaryColour, 10%);
 
-@buttonSecondaryColour: #333;
+@buttonSecondaryColour: #666;
 @buttonSecondaryColourHover: lighten(@buttonSecondaryColour, 20%);
 
 @buttonCancelColour: #DF151A;
@@ -151,23 +151,23 @@
 	.columns(@cols);
 }
 
-.button-dropdown() {
+.dropdown() {
 	position: relative;
 	.button {
-    position: relative;
-    &:after {
-      display: inline-block;
-      font-family: FontAwesome;
-      content:"\f0d7";
-      margin-left: @gutter;
-      position: relative;
-      top:2px;
-    }
-  }
+    	position: relative;
+		    &:after {
+		      display: inline-block;
+		      font-family: FontAwesome;
+		      content:"\f0d7";
+		      margin-left: @gutter;
+		      position: relative;
+		      top:2px;
+		    }
+  	}
 
   ul {
   	margin:0 0 0 0;
-  	padding: 0 0 0 0;
+  	padding: 5px 0 5px 0;
   	position: absolute;
   	top:80%;
   	border: 1px solid #eee;
@@ -191,15 +191,12 @@
   			height: 100%;
   			color: #666;
   			.border-box();
-  			padding: @gutter;
-  			border-top: 1px solid transparent;
-  			border-bottom: 1px solid transparent;
+  			padding: @gutter/2;
+  			font-weight: 300;
 
   			&:hover {
-				border-top: 1px solid #666;
-				border-bottom: 1px solid #666;
-				background: #666;
-				color: #fff;
+				background: #eee;
+				color: #444;
   			}
   		}
   	}
