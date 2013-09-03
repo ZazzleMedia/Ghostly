@@ -178,7 +178,8 @@ textarea:focus {
   border: 1px solid #009fe3;
 }
 input[type="submit"],
-button {
+button,
+input[type="button"] {
   display: inline-block;
   text-align: center;
   line-height: 1.5em;
@@ -199,16 +200,19 @@ button {
   transition: all 0.3s;
 }
 input[type="submit"]:hover,
-button:hover {
+button:hover,
+input[type="button"]:hover {
   background: #17baff;
   border: 1px solid #17baff;
 }
 input[type="submit"]:visited,
-button:visited {
+button:visited,
+input[type="button"]:visited {
   color: #fff;
 }
 input[type="submit"] i,
-button i {
+button i,
+input[type="button"] i {
   line-height: 1.5em;
 }
 label {
@@ -311,14 +315,14 @@ select {
   box-sizing: border-box;
 }
 .wrapper {
-  width: 66.66666666666667%;
+  width: 83.33333333333334%;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  margin-left: 16.666666666666668%;
+  margin-left: 8.333333333333334%;
   padding: 20px 0;
 }
 .hero {
@@ -337,4 +341,239 @@ select {
 .wrapper h4 {
   padding-left: 10px;
   padding-right: 10px;
+}
+.input-icon {
+  position: relative;
+  width: 100%;
+}
+.input-icon:before,
+.input-icon:after {
+  content: " ";
+  display: table;
+}
+.input-icon:after {
+  clear: both;
+}
+.input-icon input,
+.input-icon span {
+  float: left;
+  display: block;
+}
+.input-icon input[type="text"],
+.input-icon input[type="tel"],
+.input-icon input[type="search"],
+.input-icon input[type="email"],
+.input-icon input[type="password"],
+.input-icon textarea {
+  width: 100%;
+  padding-left: 41px;
+}
+.input-icon input[type="text"]:focus ~ span i,
+.input-icon input[type="tel"]:focus ~ span i,
+.input-icon input[type="search"]:focus ~ span i,
+.input-icon input[type="email"]:focus ~ span i,
+.input-icon input[type="password"]:focus ~ span i,
+.input-icon textarea:focus ~ span i {
+  color: #009fe3;
+}
+.input-icon span {
+  text-align: center;
+  padding: 14px 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.input-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-button:before,
+.input-button:after {
+  content: " ";
+  display: table;
+}
+.input-button:after {
+  clear: both;
+}
+.input-button input {
+  float: left;
+  display: block;
+}
+.input-button input[type="submit"],
+.input-button button,
+.input-button input[type="button"] {
+  float: left;
+}
+.input-prepend:before,
+input-append:before,
+.input-prepend:after,
+input-append:after {
+  content: " ";
+  display: table;
+}
+.input-prepend:after,
+input-append:after {
+  clear: both;
+}
+.input-prepend input,
+input-append input {
+  float: left;
+  display: block;
+}
+.input-prepend .add-on,
+input-append .add-on {
+  display: block;
+  float: left;
+}
+.input-prepend span.add-on,
+input-append span.add-on {
+  padding: 14px 15px 13px 15px;
+  border: 1px solid #ddd;
+  border-right: 1px solid transparent;
+  position: relative;
+  left: 1px;
+}
+.input-prepend span.add-on + input,
+input-append span.add-on + input {
+  border-left: 1px solid transparent;
+}
+.buttons {
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.buttons .button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #009fe3;
+  color: #fff;
+  background: #009fe3;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.buttons .button:hover {
+  background: #17baff;
+  border: 1px solid #17baff;
+}
+.buttons .button:visited {
+  color: #fff;
+}
+.buttons .button i {
+  line-height: 1.5em;
+}
+.modal,
+.modal-warning {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  height: 450px;
+  margin: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  z-index: 2000;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal .modal-title,
+.modal-warning .modal-title {
+  position: relative;
+}
+.modal .modal-title span,
+.modal-warning .modal-title span {
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 18px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+.modal .modal-title i,
+.modal-warning .modal-title i {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  padding: 20px 20px;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+}
+.modal .modal-title i:hover,
+.modal-warning .modal-title i:hover {
+  color: #009fe3;
+}
+.modal.show,
+.modal-warning.show {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.modal.show ~ .modal-overlay,
+.modal-warning.show ~ .modal-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-warning .modal-title span {
+  background: #F54828;
+  color: #fff;
+}
+.modal-warning .modal-title i {
+  color: #fff;
+}
+.modal-warning .modal-title i:hover {
+  color: #333;
+}
+.modal-overlay {
+  visibility: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 1000;
 }

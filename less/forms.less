@@ -24,7 +24,7 @@ textarea {
 
 }
 
-input[type="submit"], button {
+input[type="submit"], button, input[type="button"] {
 	.button(primary);
 	.button-size();
 	.transition(all 0.3s);
@@ -46,6 +46,43 @@ select {
 	top:-1px;
 }
 
+.input-prepend() {
+	.clearfix();
+	input {
+		float: left;
+		display: block;
+	}
+
+	.add-on {
+		display: block;
+		float: left;
+	}
+
+	span.add-on {
+		padding: @gutter+4 @gutter+5 @gutter+3 @gutter+5;
+		border: 1px solid #ddd;
+		border-right: 1px solid transparent;
+		position: relative;
+		left: 1px;
+	}
+
+	span.add-on + input {
+		border-left: 1px solid transparent;
+	}
+}
+
+.input-append() {
+	.clearfix();
+	input {
+		float: left;
+		display: block;
+	}
+
+	.add-on {
+		float: left;
+	}
+}
+
 
 //stylings for inputs
 .input-group-button(@buttonLength: auto; @inputLength: auto; @float: left) {
@@ -56,11 +93,11 @@ select {
 		display: block;
 	}
 
-	input[type="text"],input[type="tel"],input[type="search"], input[type="email"] {
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], input[type="password"] {
 		.columns(@inputLength);
 	}
 
-	input[type="submit"] {
+	input[type="submit"], button, input[type="button"] {
 		.columns(@buttonLength);
 		float: @float;
 	}
@@ -92,6 +129,27 @@ select {
 		left:0;
 	}
 }
+
+.form-group() {
+	display: block;
+	width:100%;
+	.clearfix();
+	margin: @baseFontSize*1.5 0;
+
+	label {
+		.columns(3);
+		text-align: right;
+		padding: @gutter+5 @gutter*2;
+	}
+
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], .input-icon, textarea, input[type="password"] {
+		.columns(9);
+	}
+
+	input[type="submit"], button, input[type="button"] {
+		.push(3);
+	}
+}
 	
 //Stylings for forms
 
@@ -109,7 +167,7 @@ select {
 		margin-bottom: 10px;
 	}
 
-	input[type="submit"] {
+	input[type="submit"], button, input[type="button"] {
 		margin-top: @baseFontSize*1.5;
 		display:inline-block;
 		width:auto;
@@ -135,17 +193,17 @@ select {
 		padding: @gutter+5 @gutter*2;
 	}
 
-	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], .input-icon, textarea {
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], .input-icon, textarea, input[type="password"] {
 		.columns(9);
 	}
 
 	.input-icon {
-		input[type="text"],input[type="tel"],input[type="search"], input[type="email"], textarea {
+		input[type="text"],input[type="tel"],input[type="search"], input[type="email"], textarea, input[type="password"] {
 			width: 100%;
 		}
 	}
 
-	input[type="submit"] {
+	input[type="submit"], button, input[type="button"] {
 		.push(3);
 	}
 }
