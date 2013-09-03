@@ -1,0 +1,340 @@
+@import "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css";
+/*===========================================================================================//
+  GHOSTLY - A FRAMEWORK THAT DOESN'T APPEAR TO BE THERE
+  VER - 0.0
+
+  The framework is used by dropping less mixins into classes so that your HTML isn't cluttered up,
+  to make this easier to understand then the framework has modules that you can load in by 
+  uncommenting them.
+//===========================================================================================*/
+/*========================================//
+	COLOURS - USE THIS TO CREATE YOUR COLOUR 
+	PALLETE AND THEN USE IT WHERE NEEDED
+//========================================*/
+/*==============================================//
+  TYPOGRAPHIC STYLES - Use the settings to quickly 
+  change the font styles and colours
+//==============================================*/
+/*---------------Typography Configs--------------------*/
+/*---------------End of Config--------------------*/
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.5em;
+  color: #666;
+}
+body {
+  font-family: "source-sans-pro", sans-serif;
+  font-size: 16px;
+  color: #666666;
+  font-weight: 300;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+p {
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 0 0 24px 0;
+  padding: 0 0 0 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: #444444;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+h1 {
+  font-size: 65.53600000000002px;
+  line-height: 1em;
+  margin: 36px 0 12px 0;
+}
+h2 {
+  font-size: 40.96000000000001px;
+  line-height: 1.3em;
+  margin: 36px 0 12px 0;
+}
+h3 {
+  font-size: 25.6px;
+  line-height: 1.3em;
+  margin: 36px 0 12px 0;
+}
+h4 {
+  font-size: 25.6px;
+  line-height: 1.5em;
+  margin: 36px 0 12px 0;
+}
+h5 {
+  font-size: 18px;
+  line-height: 1.125em;
+  margin-bottom: 1.125em;
+}
+h6 {
+  font-size: 16px;
+  line-height: 1.125em;
+  margin-bottom: 1.125em;
+}
+blockquote {
+  border-left: 5px solid #009fe3;
+  padding-left: 20px;
+}
+cite {
+  font-size: 0.8em;
+  color: #777;
+}
+ul,
+ol {
+  margin: 0 25px;
+  padding: 0 24px;
+}
+li {
+  line-height: 1.5em;
+}
+/*===============================================//
+	STYLINGS FOR LINKS
+//==============================================*/
+a {
+  text-decoration: none;
+  color: #17a6ff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a:visited {
+  color: #008ab0;
+}
+a:hover {
+  color: #fff;
+  background: #009fe3;
+}
+a:active {
+  color: #fff;
+  background: #4aabff;
+}
+/*========================================//
+	TABLES - These contain a defualt styling 
+	and then mixins that further chnage the 
+	look of them
+//========================================*/
+table {
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: 24px;
+}
+table thead {
+  width: 100%;
+  border-bottom: 1px solid transparent;
+}
+table td {
+  text-align: center;
+  padding: 10px;
+}
+table th {
+  padding: 10px;
+  font-weight: 700;
+}
+/*===============================================//
+	STYLINGS FOR FORM ELEMENTS
+//==============================================*/
+input,
+label,
+textarea {
+  font-size: 16px;
+  font-family: "source-sans-pro", sans-serif;
+  margin: 0 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="tel"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  color: #444;
+  outline: none;
+  line-height: 1.5em;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border: 1px solid #009fe3;
+}
+input[type="submit"],
+button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #009fe3;
+  color: #fff;
+  background: #009fe3;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+input[type="submit"]:hover,
+button:hover {
+  background: #17baff;
+  border: 1px solid #17baff;
+}
+input[type="submit"]:visited,
+button:visited {
+  color: #fff;
+}
+input[type="submit"] i,
+button i {
+  line-height: 1.5em;
+}
+label {
+  padding: 10px 20px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+select {
+  padding: 10px;
+  margin: 0 5px 0 0;
+  color: #666666;
+  position: relative;
+  top: -1px;
+}
+/*========================================//
+	BUTTON STYLES
+//========================================*/
+/*===============================================//
+	OBJECT ABSTRACTIONS -
+	These will be made in less but pop them into 
+	classes if you need to use them
+//==============================================*/
+/*========================================//
+	NAVIGATION STYLES
+//========================================*/
+.filter-area {
+  display: none;
+}
+.row {
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.quarter {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.third {
+  width: 33.333333333333336%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.half {
+  width: 50%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.two-thirds {
+  width: 66.66666666666667%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.three-quarters {
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.full {
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 66.66666666666667%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 16.666666666666668%;
+  padding: 20px 0;
+}
+.hero {
+  background: #009fe3;
+  padding: 20px;
+}
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  margin: 24px 0;
+}
+.wrapper p,
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4 {
+  padding-left: 10px;
+  padding-right: 10px;
+}

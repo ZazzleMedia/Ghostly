@@ -1,0 +1,59 @@
+@import "../less/ghostly.less"; //Import Ghostly
+
+//Common Layout Classes
+
+.row {
+	.clearfix();
+	.full();
+}
+
+.quarter {
+	.quarter();
+}
+
+.third {
+	.third();
+}
+
+.half {
+	.half();
+}
+
+.two-thirds {
+	.two-thirds();
+}
+
+.three-quarters {
+	.three-quarters();
+}
+
+.full {
+	.full();
+}
+
+//Template Styling
+
+.wrapper {
+	.columns(8);
+	.push(2);
+	padding: @gutter*2 0;
+}
+
+//Hero Section
+.hero {
+	background: @base;
+	padding: @gutter*2;
+
+	h1 {
+		color: #fff;
+		text-align: center;
+		margin: @baseFontSize*1.5 0;
+	}
+}
+
+.wrapper {
+	p, h1, h2, h3 ,h4 {
+		.gutter();
+	}
+}
+
