@@ -8,7 +8,7 @@
 @buttonPrimaryColour: @base;
 @buttonPrimaryColourHover: lighten(@buttonPrimaryColour, 10%);
 
-@buttonSecondaryColour: #666;
+@buttonSecondaryColour: #88C425;
 @buttonSecondaryColourHover: lighten(@buttonSecondaryColour, 20%);
 
 @buttonCancelColour: #DF151A;
@@ -20,9 +20,10 @@
 	line-height: 1.5em;
 	margin: 0 0 0 0;
 	border:1px solid transparent;
+	border-radius: 3px;
 }
 
-.button(@type) when (@type = default) {
+.button-default() {
 	display: inline-block;
 	text-align: center;
 	line-height: 1.5em;
@@ -34,6 +35,7 @@
 	font-weight: normal;
 	font-family: @baseFontFamily;
 	cursor: pointer;
+	border-radius: 3px;
 
 	&:hover {
 		background: @buttonDefaultColourHover;
@@ -49,7 +51,7 @@
 	}
 }
 
-.button (@type) when (@type = primary) {
+.button-primary() {
 	display: inline-block;
 	text-align: center;
 	line-height: 1.5em;
@@ -61,6 +63,7 @@
 	font-weight: normal;
 	font-family: @baseFontFamily;
 	cursor: pointer;
+	border-radius: 3px;
 
 	&:hover {
 		background: @buttonPrimaryColourHover;
@@ -76,7 +79,7 @@
 	}
 }
 
-.button (@type) when (@type = secondary) {
+.button-secondary() {
 	display: inline-block;
 	text-align: center;
 	line-height: 1.5em;
@@ -88,6 +91,7 @@
 	font-weight: normal;
 	font-family: @baseFontFamily;
 	cursor: pointer;
+	border-radius: 3px;
 
 	&:hover {
 		background: @buttonSecondaryColourHover;
@@ -103,7 +107,7 @@
 	}
 }
 
-.button (@type) when (@type = cancel) {
+.button-cancel() {
 	display: inline-block;
 	text-align: center;
 	line-height: 1.5em;
@@ -115,6 +119,7 @@
 	font-weight: normal;
 	font-family: @baseFontFamily;
 	cursor: pointer;
+	border-radius: 3px;
 
 	&:hover {
 		background: @buttonCancelColourHover;
@@ -130,17 +135,17 @@
 	}
 }
 
-.button-size(@size) when (@size = small) {
+.button-small() {
 	font-size: @baseFontSize - 4;
 	padding: @gutter;
 }
 
-.button-size(@size: normal) when (@size = normal) { //normal size
+.button-normal { //normal size
 	font-size: @baseFontSize;
 	padding: @gutter @gutter*2;
 }
 
-.button-size(@size) when (@size = large) { //large Size
+.button-large { //large Size
 	font-size: @baseFontSize + 4;
 	padding: @gutter @gutter*2;
 }
@@ -151,69 +156,41 @@
 	.columns(@cols);
 }
 
-.dropdown() {
-	position: relative;
-	.button {
-    	position: relative;
-		    &:after {
-		      display: inline-block;
-		      font-family: FontAwesome;
-		      content:"\f0d7";
-		      margin-left: @gutter;
-		      position: relative;
-		      top:2px;
-		    }
-  	}
+.button-group-join() {
+	.clearfix();
+	> .button, > .dropdown, > .button-group, > .button-primary, > .button-secondary, > .button-cancel {
+		float: left;
+		border-radius: 0;
 
-  ul {
-  	margin:0 0 0 0;
-  	padding: 5px 0 5px 0;
-  	position: absolute;
-  	top:80%;
-  	border: 1px solid #eee;
-  	opacity:0;
-  	display: none;
-  	.transition(all 0.8s);
-  	background: #fff;
-  	z-index:1000;
-  	li {
-  		list-style-type: none;
+		&:first-child {
+			border-radius: 3px 0 0 3px;
 
-  	&.divider {
-  		border-top:1px solid #eee;
-  		border-bottom: 1px solid #eee;
-  		margin: @gutter/2 0;
-  	}
+			> .button, > .button-primary, > .button-secondary, > .button-cancel {
+				border-radius: 3px 0 0 3px;
+			}
+		}
 
-  		a {
-  			display: block;
-  			width: 100%;
-  			height: 100%;
-  			color: #666;
-  			.border-box();
-  			padding: @gutter/2;
-  			font-weight: 300;
+		&:last-child {
+			border-radius: 0 3px 3px 0;
 
-  			&:hover {
-				background: #eee;
-				color: #444;
-  			}
-  		}
-  	}
-  }
-
-  &.active {
-	ul {
-		opacity:1;
-		display: block;
-		top: 100%;
+			> .button, > .button-primary, > .button-secondary, > .button-cancel {
+				border-radius: 0 3px 3px 0;
+			}
+		}
 	}
-  }
+
+	> .dropdown {
+		> .button, > .button-primary, > .button-secondary, > .button-cancel {
+			borer-radius: 0;
+		}
+	}
 }
 
 .button-group() {
-	
-	> .button, > .button-dropdown, > .button-group {
-		float: left;
+	.clearfix();
+
+	> .button, > .dropdown, > .button-group, > .button-primary, > .button-secondary, > .button-cancel {
+		float:left;
+		margin: 0 @gutter/2;
 	}
 }
