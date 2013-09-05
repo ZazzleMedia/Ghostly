@@ -2,7 +2,17 @@
 	<head>
 		<title>Ghostly | The framework that doesn't appear to be there.</title>
 		<link rel="stylesheet" href="example-css/index.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7:all.js"></script>
+		<script>
+			$(document).ready(function(e){
+				$('.dropdown').click(function(e){
+					e.preventDefault();
+
+					$(this).toggleClass('active');
+				})
+			});
+		</script>
 	</head>
 	<body>
 		<div class="row hero">
@@ -10,51 +20,111 @@
 		</div>
 		<div class="wrapper">
 			<div class="row">
-				<div class="third">
-					<h4>Input Group</h4>
-					<form>
-						<div class="input-icon">
-							<input type="text" placeholder="Hello i'm an input with an Icon"/>
-							<span><i class="icon-user"></i></span>
-						</div>
-					</form>
-				</div>
-				<div class="third">
-					<h4>Input Group (button)</h4>
-					<form>
-						<div class="input-button">
-							<input type="submit" value="button"/>
-							<input type="text" placeholder="Hello i'm an input with a"/>
-						</div>
-					</form>
-				</div>
-				<div class="third">
-					<h4>Input Group (icon)</h4>
-					<form>
-						<div class="input-icon">
-							<input type="text" placeholder="Hello i'm an input with an Icon"/>
-							<span><i class="icon-user"></i></span>
-						</div>
-					</form>
+				<div class="half">
+					<h2>Input Append / Prepend</h2>
+					<p>An input Append / Prepend is where you can group and add buttons and icons to join them together to form a unified single looking UI Element.</p>
+					<p>They work by looking for an .add-on class that will then change the look to work accordingly to which classes you've wrapped it in (input-append or input-prepend).</p>
+					<p>Input append / prepend also allows you to define a width for both the input and the add-on by providing how many columns you want it to be in brackets.</p>
+					<p>.input-append(@inputCols,@addOnCols) and vice versa for .input-prepend(@addOnCols, @inputCols). This then explicitly sets the widhts of them so that they will proportionally fill the element they are contained in. If nothing is set for .input-append() and .input-prepend() then the widths are auto.</p>
 				</div>
 			</div>
 			<div class="row">
 					<div class="third">
-						<h4>Input prepend</h4>
+						<h4>Input prepend (Icon / I)</h4>
 						<form>
-							<div class="input-prepend">
-								<span class="add-on" ><i class="icon-user"></i></span>
+							<div class="input-append">
+								<i class="icon-user add-on"></i>
 								<input type="text" placeholder="Hello i'm an input with an Icon"/>
 							</div>
 						</form>
 					</div>
 					<div class="third">
-						<h4>Input append</h4>
+						<h4>Input append (Button)</h4>
 						<form>
 							<div class="input-append">
 								<input type="text" placeholder="Hello i'm an input with a"/>
 								<input class="add-on" type="submit" value="button"/>
 							</div>
+						</form>
+					</div>
+
+					<div class="third">
+						<h4>Input prepend (Button)</h4>
+						<form>
+							<div class="input-prepend">
+								<input class="add-on button-secondary" type="submit" value="button"/>
+								<input type="text" placeholder="Hello i'm an input with a"/>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="third">
+						<h4>Input Append (Button + Dropdown)</h4>
+						<form>
+							<div class="input-append">
+								<input type="text" placeholder="Hello i'm an input with a"/>
+								<div class="dropdown add-on">
+									<a href="#" class="button-secondary">Category</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="third">
+						<h4>Input Prepend (Button + Dropdown)</h4>
+						<form>
+							<div class="input-prepend">
+								<div class="dropdown add-on">
+									<a href="#" class="button-secondary">Category</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+									</ul>
+								</div>
+								<input type="text" placeholder="Hello i'm an input with a"/>
+							</div>
+						</form>
+					</div>
+					
+					<div class="third">
+						<h4>Input prepend (Label)</h4>
+							<form>
+								<div class="input-prepend">
+									<label for="">Username</label>
+									<input type="text" placeholder="Hello i'm an input with a"/>
+								</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="third">
+						<h4>Horizontal Form</h4>
+						<form class="horizontal-form">
+							<div class="input-group">
+								<label for="">Name</label>
+								<div class="input-append">
+									<input type="text">
+									<a href="#" class="button-primary add-on">Find</a>
+								</div>
+							</div>
+							<div class="input-group">
+								<label for="">Email</label>
+								<input type="text">
+							</div>
+							<div class="input-group">
+								<label for="">Message</label>
+								<textarea></textarea>
+							</div>
+							<input type="submit" value="Send">
 						</form>
 					</div>
 				</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<head>
+		<title>Ghostly | The framework that doesn't appear to be there.</title>
+		<link rel="stylesheet" href="example-css/index.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7:all.js"></script>
+		<script>
+			$(document).ready(function(e){
+				$('.dropdown').click(function(e){
+					e.preventDefault();
+
+					$(this).toggleClass('active');
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="row hero">
+			<h1>Navigations</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="half">
+					<h4>Inline Nav</h4>
+					<ul class="inline-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Team</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</div>
+				<div class="half">
+					<h4>Bread Crumb Nav</h4>
+					<ul class="bread-crumb">
+						<li><a href="#">Groups</a></li>
+						<li><a href="#">People</a></li>
+						<li><a href="#">Users</a></li>
+						<li><a href="#">Paul</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

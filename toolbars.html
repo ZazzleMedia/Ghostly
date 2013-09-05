@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+	<head>
+		<title>Ghostly | The framework that doesn't appear to be there.</title>
+		<link rel="stylesheet" href="example-css/index.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7:all.js"></script>
+		<script>
+			$(document).ready(function(e){
+				$('.dropdown').click(function(e){
+					e.preventDefault();
+
+					$(this).toggleClass('active');
+				})
+			});
+		</script>
+		<div class="row hero">
+			<h1>Toolbars</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="half">
+					<h2>Toolbars Explained</h2>
+					<p>Toolbars are quite custom in that they have very set styles and that they will change the look of dropdowns to suit the look of the actual toolbar. If you need to customise a toolbar then you may overwrite styles, customise the mixin for this one or build your own one. If you do I suggest you use the .inline-nav() mixin as a base thats what I use to get a basic toolbar look.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="full">
+					<h4>Toolbar</h4>
+					<ul class="toolbar">
+						<li><a href="#"><i class="icon-print"></i></a></li>
+						<li><a href="#"><i class="icon-undo"></i></a></li>
+						<li><a href="#"><i class="icon-rotate-right"></i></a></li>
+						<li><a href="#"><i class="icon-paste"></i></a></li>
+						<li class="dropdown">
+							<a href="#">16</a>
+							<ul>
+								<li><a href="#">18</a></li>
+								<li><a href="#">22</a></li>
+								<li><a href="#">26</a></li>
+								<li><a href="#">32</a></li>
+								<li><a href="#">48</a></li>
+								<li><a href="#">64</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Text Styles</a>
+							<ul>
+								<li><a href="#">A Style</a></li>
+								<li><a href="#">A Style</a></li>
+								<li><a href="#">A Style</a></li>
+								<li><a href="#">A Style</a></li>
+								<li><a href="#">A Style</a></li>
+								<li><a href="#">A Style</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Font Family</a>
+							<ul>
+								<li><a href="#">A Font</a></li>
+								<li><a href="#">A Font</a></li>
+								<li><a href="#">A Font</a></li>
+								<li><a href="#">A Font</a></li>
+								<li><a href="#">A Font</a></li>
+								<li><a href="#">A Font</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="icon-bold"></i></a></li>
+						<li><a href="#"><i class="icon-italic"></i></a></li>
+						<li><a href="#"><i class="icon-underline"></i></a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="icon-align-left"></i></a></li>
+						<li><a href="#"><i class="icon-align-center"></i></a></li>
+						<li><a href="#"><i class="icon-align-right"></i></a></li>
+						<li><a href="#"><i class="icon-align-justify"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="full">
+					<h4>Menu bar</h4>
+					<ul class="menubar">
+						<li class="dropdown">
+							<a href="#">File</a>
+							<ul>
+								<li><a href="#">New</a></li>
+								<li><a href="#">Open</a></li>
+								<li class="divider"></li>
+								<li class="dropdown">
+									<a href="#">Export</a>
+									<ul>
+										<li><a href="#">Markdown</a></li>
+										<li><a href="#">HTML</a></li>
+										<li><a href="#">Plain Text</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Something Else</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Edit</a>
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">View</a>
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Insert</a>
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Format</a>
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Tools</a>
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Table</a>
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#">Help</a>
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

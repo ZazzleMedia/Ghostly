@@ -268,6 +268,22 @@ select {
 .filter-area {
   display: none;
 }
+@-webkit-keyframes spin-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin-animation {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
 .row {
   width: 100%;
   float: left;
@@ -367,103 +383,320 @@ select {
   padding-left: 10px;
   padding-right: 10px;
 }
-.input-icon {
+.input-prepend {
   position: relative;
-  width: 100%;
 }
-.input-icon:before,
-.input-icon:after {
+.input-prepend:before,
+.input-prepend:after {
   content: " ";
   display: table;
 }
-.input-icon:after {
+.input-prepend:after {
   clear: both;
 }
-.input-icon input,
-.input-icon span {
+.input-prepend input,
+.input-prepend textarea {
   float: left;
   display: block;
 }
-.input-icon input[type="text"],
-.input-icon input[type="tel"],
-.input-icon input[type="search"],
-.input-icon input[type="email"],
-.input-icon input[type="password"],
-.input-icon textarea {
-  width: 100%;
-  padding-left: 41px;
+.input-prepend .add-on {
+  display: block;
+  float: left;
 }
-.input-icon input[type="text"]:focus ~ span i,
-.input-icon input[type="tel"]:focus ~ span i,
-.input-icon input[type="search"]:focus ~ span i,
-.input-icon input[type="email"]:focus ~ span i,
-.input-icon input[type="password"]:focus ~ span i,
-.input-icon textarea:focus ~ span i {
-  color: #009fe3;
+.input-prepend button.add-on,
+.input-prepend input[type="submit"].add-on,
+.input-prepend .button.add-on,
+.input-prepend .button-primary.add-on,
+.input-prepend .button-secondary.add-on,
+.input-prepend .button-cancel-add-on {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
 }
-.input-icon span {
-  text-align: center;
-  padding: 14px 15px;
+.input-prepend i.add-on {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
 }
-.input-button {
+.input-prepend i.add-on + input,
+.input-prepend i.add-on + textarea {
+  padding-left: 40px;
+}
+.input-prepend .dropdown {
+  float: left;
+}
+.input-prepend .dropdown > .button-secondary,
+.input-prepend .dropdown > .button,
+.input-prepend .dropdown > .button-primary,
+.input-prepend .dropdown > .button-cancel {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
-.input-button:before,
-.input-button:after {
-  content: " ";
-  display: table;
-}
-.input-button:after {
-  clear: both;
-}
-.input-button input {
+.input-prepend label {
   float: left;
-  display: block;
+  padding: 15px 20px;
 }
-.input-button input[type="submit"],
-.input-button button,
-.input-button input[type="button"] {
-  float: left;
-}
-.input-prepend:before,
-input-append:before,
-.input-prepend:after,
-input-append:after {
-  content: " ";
-  display: table;
-}
-.input-prepend:after,
-input-append:after {
-  clear: both;
-}
-.input-prepend input,
-input-append input {
-  float: left;
-  display: block;
-}
-.input-prepend .add-on,
-input-append .add-on {
-  display: block;
-  float: left;
-}
-.input-prepend span.add-on,
-input-append span.add-on {
-  padding: 14px 15px 13px 15px;
-  border: 1px solid #ddd;
-  border-right: 1px solid transparent;
+.input-append {
   position: relative;
-  left: 1px;
 }
-.input-prepend span.add-on + input,
-input-append span.add-on + input {
-  border-left: 1px solid transparent;
+.input-append:before,
+.input-append:after {
+  content: " ";
+  display: table;
+}
+.input-append:after {
+  clear: both;
+}
+.input-append input,
+.input-append textarea {
+  float: left;
+  display: block;
+}
+.input-append .add-on {
+  float: left;
+}
+.input-append button.add-on,
+.input-append input[type="submit"].add-on,
+.input-append .button.add-on,
+.input-append .button-primary.add-on,
+.input-append .button-secondary.add-on,
+.input-append .button-cancel-add-on {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-append i.add-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
+}
+.input-append i.add-on + input,
+.input-append i.add-on + textarea {
+  padding-left: 40px;
+}
+.input-append .dropdown {
+  float: left;
+}
+.input-append .dropdown > .button-secondary,
+.input-append .dropdown > .button,
+.input-append .dropdown > .button-primary,
+.input-append .dropdown > .button-cancel {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-append label {
+  float: left;
+  padding: 15px 20px;
+}
+.input-group {
+  display: block;
+  width: 100%;
+  margin: 24px 0;
+}
+.input-group:before,
+.input-group:after {
+  content: " ";
+  display: table;
+}
+.input-group:after {
+  clear: both;
+}
+.input-group label {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: right;
+  padding: 15px 20px;
+}
+.input-group input[type="text"],
+.input-group input[type="tel"],
+.input-group input[type="search"],
+.input-group input[type="email"],
+.input-group .input-prepend,
+.input-group .input-append,
+.input-group textarea,
+.input-group input[type="password"] {
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-group input[type="submit"],
+.input-group button,
+.input-group input[type="button"] {
+  margin-left: 25%;
+}
+.horizontal-form .input-group {
+  display: block;
+  width: 100%;
+  margin: 24px 0;
+}
+.horizontal-form .input-group:before,
+.horizontal-form .input-group:after {
+  content: " ";
+  display: table;
+}
+.horizontal-form .input-group:after {
+  clear: both;
+}
+.horizontal-form label {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: right;
+  padding: 15px 20px;
+}
+.horizontal-form input[type="text"],
+.horizontal-form input[type="tel"],
+.horizontal-form input[type="search"],
+.horizontal-form input[type="email"],
+.horizontal-form .input-prepend,
+.horizontal-form .input-append,
+.horizontal-form textarea,
+.horizontal-form input[type="password"] {
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.horizontal-form .input-append input[type="text"],
+.horizontal-form .input-prepend input[type="text"],
+.horizontal-form .input-append input[type="tel"],
+.horizontal-form .input-prepend input[type="tel"],
+.horizontal-form .input-append input[type="search"],
+.horizontal-form .input-prepend input[type="search"],
+.horizontal-form .input-append input[type="email"],
+.horizontal-form .input-prepend input[type="email"],
+.horizontal-form .input-append textarea,
+.horizontal-form .input-prepend textarea,
+.horizontal-form .input-append input[type="password"],
+.horizontal-form .input-prepend input[type="password"] {
+  width: 100%;
+}
+.horizontal-form input[type="submit"],
+.horizontal-form button,
+.horizontal-form input[type="button"] {
+  margin-left: 25%;
+}
+.horizontal-form .input-group .input-append {
+  position: relative;
+}
+.horizontal-form .input-group .input-append:before,
+.horizontal-form .input-group .input-append:after {
+  content: " ";
+  display: table;
+}
+.horizontal-form .input-group .input-append:after {
+  clear: both;
+}
+.horizontal-form .input-group .input-append input,
+.horizontal-form .input-group .input-append textarea {
+  display: block;
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.horizontal-form .input-group .input-append .add-on {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.horizontal-form .input-group .input-append button.add-on,
+.horizontal-form .input-group .input-append input[type="submit"].add-on,
+.horizontal-form .input-group .input-append .button.add-on,
+.horizontal-form .input-group .input-append .button-primary.add-on,
+.horizontal-form .input-group .input-append .button-secondary.add-on,
+.horizontal-form .input-group .input-append .button-cancel-add-on {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.horizontal-form .input-group .input-append i.add-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
+}
+.horizontal-form .input-group .input-append i.add-on + input,
+.horizontal-form .input-group .input-append i.add-on + textarea {
+  padding-left: 40px;
+}
+.horizontal-form .input-group .input-append .dropdown {
+  float: left;
+}
+.horizontal-form .input-group .input-append .dropdown > .button-secondary,
+.horizontal-form .input-group .input-append .dropdown > .button,
+.horizontal-form .input-group .input-append .dropdown > .button-primary,
+.horizontal-form .input-group .input-append .dropdown > .button-cancel {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.horizontal-form .input-group .input-append label {
+  float: left;
+  padding: 15px 20px;
 }
 .buttons {
   padding-top: 50px;
@@ -1074,4 +1307,325 @@ input-append span.add-on + input {
 .button-group-join > .dropdown > .button-secondary,
 .button-group-join > .dropdown > .button-cancel {
   borer-radius: 0;
+}
+.toolbar {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.toolbar:before,
+.toolbar:after {
+  content: " ";
+  display: table;
+}
+.toolbar:after {
+  clear: both;
+}
+.toolbar > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.toolbar > li a {
+  display: block;
+}
+.toolbar > li {
+  float: left;
+}
+.toolbar > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.toolbar > li a:hover {
+  color: #fff;
+}
+.toolbar:before,
+.toolbar:after {
+  content: " ";
+  display: table;
+}
+.toolbar:after {
+  clear: both;
+}
+.toolbar > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.toolbar > li a {
+  display: block;
+}
+.toolbar > li {
+  float: left;
+}
+.toolbar > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.toolbar > li a:hover {
+  color: #fff;
+}
+.toolbar > li a {
+  color: #666;
+  font-size: 14px;
+}
+.toolbar > li a:hover {
+  color: #fff;
+}
+.toolbar > .divider {
+  border-left: 1px solid #ddd;
+  margin: 0 0;
+  height: 34px;
+}
+.toolbar > .dropdown {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.toolbar > .dropdown + .dropdown {
+  border-left: none;
+}
+.menubar {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.menubar:before,
+.menubar:after {
+  content: " ";
+  display: table;
+}
+.menubar:after {
+  clear: both;
+}
+.menubar > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.menubar > li a {
+  display: block;
+}
+.menubar > li {
+  float: left;
+}
+.menubar > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.menubar > li a:hover {
+  color: #fff;
+}
+.menubar:before,
+.menubar:after {
+  content: " ";
+  display: table;
+}
+.menubar:after {
+  clear: both;
+}
+.menubar > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.menubar > li a {
+  display: block;
+}
+.menubar > li {
+  float: left;
+}
+.menubar > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.menubar > li a:hover {
+  color: #fff;
+}
+.menubar > .dropdown.active > a {
+  background: #009fe3;
+  color: #fff;
+}
+.menubar > .dropdown a:after {
+  display: none;
+}
+.inline-nav {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.inline-nav:before,
+.inline-nav:after {
+  content: " ";
+  display: table;
+}
+.inline-nav:after {
+  clear: both;
+}
+.inline-nav > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.inline-nav > li a {
+  display: block;
+}
+.inline-nav > li {
+  float: left;
+}
+.inline-nav > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.inline-nav > li a:hover {
+  color: #fff;
+}
+.bread-crumb {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.bread-crumb:before,
+.bread-crumb:after {
+  content: " ";
+  display: table;
+}
+.bread-crumb:after {
+  clear: both;
+}
+.bread-crumb > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.bread-crumb > li a {
+  display: block;
+}
+.bread-crumb > li {
+  float: left;
+}
+.bread-crumb > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.bread-crumb > li a:hover {
+  color: #fff;
+}
+.bread-crumb:before,
+.bread-crumb:after {
+  content: " ";
+  display: table;
+}
+.bread-crumb:after {
+  clear: both;
+}
+.bread-crumb > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.bread-crumb > li a {
+  display: block;
+}
+.bread-crumb > li {
+  float: left;
+}
+.bread-crumb > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.bread-crumb > li a:hover {
+  color: #fff;
+}
+.bread-crumb li a {
+  padding: 5px 0;
+  margin-left: 10px;
+}
+.bread-crumb li a:before {
+  content: "\f105";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-right: 10px;
+}
+.bread-crumb li a:hover {
+  background: transparent;
+  color: #009fe3;
+  text-decoration: underline;
+}
+.bread-crumb li a:hover:before {
+  color: #666;
+}
+.bread-crumb li:first-child a:before {
+  display: none;
+}
+.loading-spinner {
+  text-align: center;
+}
+.loading-spinner span {
+  display: block;
+  -webkit-animation: spin-animation linear infinite 1s;
+  -moz-animation: spin-animation linear infinite 1s;
+}
+.loading-spinner span i {
+  font-size: 64px;
+}
+.loading-spinner h5 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+.loading-bar-wrapper {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+}
+.loading-bar-wrapper .loading-bar {
+  width: 20%;
+  height: 5px;
+  background: #009fe3;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
 }

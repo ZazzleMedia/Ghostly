@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<head>
+		<title>Ghostly | The framework that doesn't appear to be there.</title>
+		<link rel="stylesheet" href="example-css/index.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7:all.js"></script>
+		<script>
+			$(document).ready(function(e){
+				$('.dropdown').click(function(e){
+					e.preventDefault();
+
+					$(this).toggleClass('active');
+				})
+			});
+		</script>
+		<div class="row hero">
+			<h1>Loading Animations</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="third">
+					<h4>Loading Spinner</h4>
+					<div class="loading-spinner">
+						<span>
+							<i class="icon-spinner"></i>
+						</span>
+						<h5>Loading</h5>
+					</div>
+				</div>
+				<div class="third">
+					<h4>Loading Bar</h4>
+					<div class="loading-bar-wrapper">	
+							<div class="loading-bar"></div>
+					</div>
+				</div>
+				<div class="third"></div>
+			</div>
+		</div>
+	</body>
+</html>
