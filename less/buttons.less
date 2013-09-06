@@ -2,8 +2,8 @@
 	BUTTON STYLES
 //========================================*/
 
-@buttonDefaultColour: #666;
-@buttonDefaultColourHover: lighten(@buttonDefaultColour, 20%);
+@buttonDefaultColour: #f8f8f8;
+@buttonDefaultColourHover: darken(@buttonDefaultColour, 5%);
 
 @buttonPrimaryColour: @base;
 @buttonPrimaryColourHover: lighten(@buttonPrimaryColour, 10%);
@@ -14,7 +14,7 @@
 @buttonCancelColour: #DF151A;
 @buttonCancelColourHover: lighten(@buttonCancelColour, 20%);
 
-.button() { // A button building block mixin that simply makes a button
+.button-base() { // A button building block mixin that simply makes a button
 	display: inline-block;
 	text-align: center;
 	line-height: 1.5em;
@@ -23,13 +23,13 @@
 	border-radius: 3px;
 }
 
-.button-default() {
+.button() {
 	display: inline-block;
 	text-align: center;
 	line-height: 1.5em;
 	margin: 0 0 0 0;
-	border:1px solid @buttonDefaultColour;
-	color: #fff;
+	border:1px solid #ddd;
+	color: #666;
 	background: @buttonDefaultColour;
 	-webkit-appearance: none;
 	font-weight: normal;
@@ -40,10 +40,12 @@
 	&:hover {
 		background: @buttonDefaultColourHover;
 		border: 1px solid @buttonDefaultColourHover;
+		color: #444;
+		border: 1px solid darken(#ddd, 5%);
 	}
 
 	&:visited {
-		color: #fff;
+		color: #666;
 	}
 
 	i {

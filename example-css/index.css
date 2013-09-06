@@ -846,6 +846,34 @@ select {
   transition: opacity 0.3s;
   z-index: 1000;
 }
+.button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #ddd;
+  color: #666;
+  background: #f8f8f8;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.button:hover {
+  background: #ebebeb;
+  border: 1px solid #ebebeb;
+  color: #444;
+  border: 1px solid #d0d0d0;
+}
+.button:visited {
+  color: #666;
+}
+.button i {
+  line-height: 1.5em;
+}
 .button-primary {
   display: inline-block;
   text-align: center;
