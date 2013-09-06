@@ -1,0 +1,195 @@
+//poltergeist.less - A list of classnames to be used for actual use in projects
+
+@import "../less/ghostly.less";
+
+//===========================================Buttons===============================
+//If you wish to customise these, then head to buttons.less to change the colours etc.
+//If you wish to make your own one then there is a .button-base() mixin for use that applies display, text-align, 
+//line-height margin, border and border-radius properties.
+
+.button {
+	.button();
+}
+
+.button-primary {
+	.button-primary();
+}
+
+.button-secondary {
+	.button-secondary();
+}
+
+.button-cancel {
+	.button-cancel();
+}
+
+
+//==========================================Dropdown===============================
+//This is a super generic class that will convert a div wrapped around an anchor, button, button class and a ul to create a dropdown.
+//It has a strong dependancy on using .dropdown so please only use it as .dropdown.
+.dropdown {
+	.dropdown();
+}
+
+//==========================================Input Groups============================
+//Input group classes will add a label and input and align them vertically so that they appear inline. It uses the column layouts system and will
+//be 3 columns for a lable and 9 for an input. If you want to change it change it in forms.less
+
+.input-group {
+	.input-group();
+}
+
+//Input append and prepend allow you to add on an icon(i), button or dropdown to an input to make it look like 1 
+//UI element provided it has the class of add-on.
+//These classes use the default which means the add on and input will be at widht auto. 
+//If you want to specify explicit widths then use the mixin to make a new class or alternatively use any width columns targetting the add-on and input respectively.
+
+.input-append {
+	.input-append();
+}
+
+.input-prepend {
+	.input-append();
+}
+
+.input-append-9-3 { //input = 9columns; add-on = 3 columns;
+	.input-append(9,3);
+}
+
+.input-prepend-3-9 { //add-on = 3 columns; input = 9 columns;
+	.input-append(3,9);
+}
+
+//=============================================Forms===================================
+//Apply the following classes to a form to style them, the mixin will do all teh work for you.
+
+.vertical-form { //This is basically your classic contact form with teh labels above the inputs and textarea.
+	.vertical-form();
+}
+
+//HTML Structure Example
+/*
+	<form class=".vertical-form">
+		<label>Name</label>
+		<input type="text" plceholder="Enter your Name">
+
+		<label>Email</label>
+		<input type="email" plceholder="Enter your Email">
+
+		<label>Message</label>
+		<textarea></textarea>
+
+		<input type="submit" value="Send"/>
+	<form>	
+*/
+
+.horizontal-form { //This is a form where the label and input are aligned next to one another.
+	.horizontal-form();
+}
+
+//HTML Structure Example - this is dependant upon the input-group.
+/*
+	<form class="horizontal-form">
+		<div class="input-group">
+			<label for="">Name</label>
+			<div class="input-append">
+				<input type="text">
+				<a href="#" class="button-primary add-on">Find</a>
+			</div>
+		</div>
+		<div class="input-group">
+			<label for="">Email</label>
+			<input type="text">
+		</div>
+		<div class="input-group">
+			<label for="">Message</label>
+			<textarea></textarea>
+		</div>
+		<input type="submit" value="Send">
+	</form>
+*/// You can also see in this example that you can combine input-append inside the input group.
+
+//==============================================Modal Modules================================
+//These are classes that you can apply to make a modal window.
+//It is 6 columns in width by default but can easily be overwritten by providing a column amount or jsut setting the width property.
+
+.modal {
+	.modal();
+}
+
+.modal-small {
+	.modal(4);
+}
+
+.modal-large {
+	.modal(8);
+}
+
+.modal-overlay { //place modal-overlay after the modal in the HTML as it uses the general sibling selector to show it when the modal has a class of .show
+	.modal-overlay();
+}
+
+//HTML Structure
+/*
+	<div class="modal">
+		<div class="modal-title">
+			<span>The Title</span>
+			<i class="icon-remove"></i>
+		</div>
+		<div class="modal-content">
+			//Content here
+		</div>
+	</div>
+*/
+
+//=============================================Navigations======================================
+//There are a list of navigations some are more defined others can be used as base building blocks for new navigations
+//I will only provide one and thats bread-crumb.
+//With all navigations make sure you apply the class to the ul
+
+.bread-crumb {
+	.bread-crumb();
+}
+
+//==============================================Tables============================================
+//Tales have a default look that is defined in the tables.less use these classes to create additional looks for tables.
+//These assume that you have a table with a thead and tbody.
+// It's also important to add rules="group" onto the table or else some of the styles won't apply.(tables are weird).
+
+.striped-odd { //odd rows have a different background colour
+	.striped(odd);
+}
+
+.striped-even { //even rows have a different background colour
+	.striped(even);
+}
+
+.classic { //borders on all cells
+	.classic();
+}
+
+.contrast { //The Thead has a high contrast colour
+	.contrast();
+}
+
+.classic-horizontal { //The borders are only visible horizontally and hovering on a tr changes the background colour of it.
+	.classic-horizontal();
+}
+
+//=============================================Toolbars============================================
+//NOTE THESE STLES ARE QUITE SPECIFIC FOR PROJECTS MADE AND USED BY ZAZZLEMEDIA
+//Toolbars are basiclly fancy navigations and as such, just like navigations the class is applied to the ul.
+
+.tool-bar { // with border and a set background colour
+	.toolbar();
+}
+
+.menu-bar { //looks like a normal navigation but removes the caret on dropdowns.
+	.menu-bar();
+}
+
+.top-bar { //Specific to Zazzle Projects
+	.top-bar();
+}
+
+

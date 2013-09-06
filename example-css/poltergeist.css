@@ -1,0 +1,1635 @@
+@import "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css";
+/*===========================================================================================//
+  GHOSTLY - A FRAMEWORK THAT DOESN'T APPEAR TO BE THERE
+  VER - 0.0
+
+  The framework is used by dropping less mixins into classes so that your HTML isn't cluttered up,
+  to make this easier to understand then the framework has modules that you can load in by 
+  uncommenting them.
+//===========================================================================================*/
+/*========================================//
+	COLOURS - USE THIS TO CREATE YOUR COLOUR 
+	PALLETE AND THEN USE IT WHERE NEEDED
+//========================================*/
+/*==============================================//
+  TYPOGRAPHIC STYLES - Use the settings to quickly 
+  change the font styles and colours
+//==============================================*/
+/*---------------Typography Configs--------------------*/
+/*---------------End of Config--------------------*/
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.5em;
+  color: #666;
+}
+body {
+  font-family: "source-sans-pro", sans-serif;
+  font-size: 16px;
+  color: #666666;
+  font-weight: 300;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+p {
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 0 0 24px 0;
+  padding: 0 0 0 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: #444444;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+h1 {
+  font-size: 65.53600000000002px;
+  line-height: 1em;
+  margin: 36px 0 12px 0;
+}
+h2 {
+  font-size: 40.96000000000001px;
+  line-height: 1.3em;
+  margin: 36px 0 12px 0;
+}
+h3 {
+  font-size: 25.6px;
+  line-height: 1.3em;
+  margin: 36px 0 12px 0;
+}
+h4 {
+  font-size: 25.6px;
+  line-height: 1.5em;
+  margin: 36px 0 12px 0;
+}
+h5 {
+  font-size: 18px;
+  line-height: 1.125em;
+  margin-bottom: 1.125em;
+}
+h6 {
+  font-size: 16px;
+  line-height: 1.125em;
+  margin-bottom: 1.125em;
+}
+blockquote {
+  border-left: 5px solid #009fe3;
+  padding-left: 20px;
+}
+cite {
+  font-size: 0.8em;
+  color: #777;
+}
+ul,
+ol {
+  margin: 0 25px 24px 25px;
+  padding: 0 24px;
+}
+li {
+  line-height: 1.5em;
+}
+/*===============================================//
+	STYLINGS FOR LINKS
+//==============================================*/
+a {
+  text-decoration: none;
+  color: #17a6ff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a:visited {
+  color: #008ab0;
+}
+a:hover {
+  color: #fff;
+  background: #009fe3;
+}
+a:active {
+  color: #fff;
+  background: #4aabff;
+}
+/*========================================//
+	TABLES - These contain a defualt styling 
+	and then mixins that further chnage the 
+	look of them
+//========================================*/
+table {
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: 24px;
+}
+table thead {
+  width: 100%;
+  border-bottom: 1px solid transparent;
+}
+table td {
+  text-align: center;
+  padding: 10px;
+}
+table th {
+  padding: 10px;
+  font-weight: 700;
+}
+/*===============================================//
+	STYLINGS FOR FORM ELEMENTS
+//==============================================*/
+input,
+label,
+textarea {
+  font-size: 16px;
+  font-family: "source-sans-pro", sans-serif;
+  margin: 0 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="tel"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  color: #444;
+  outline: none;
+  line-height: 1.5em;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border: 1px solid #009fe3;
+}
+input[type="submit"],
+button,
+input[type="button"] {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #009fe3;
+  color: #fff;
+  background: #009fe3;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+input[type="submit"]:hover,
+button:hover,
+input[type="button"]:hover {
+  background: #17baff;
+  border: 1px solid #17baff;
+}
+input[type="submit"]:visited,
+button:visited,
+input[type="button"]:visited {
+  color: #fff;
+}
+input[type="submit"] i,
+button i,
+input[type="button"] i {
+  line-height: 1.5em;
+}
+input[type="submit"]:hover,
+button:hover,
+input[type="button"]:hover {
+  background: #17baff;
+  border: 1px solid #17baff;
+}
+input[type="submit"]:visited,
+button:visited,
+input[type="button"]:visited {
+  color: #fff;
+}
+input[type="submit"] i,
+button i,
+input[type="button"] i {
+  line-height: 1.5em;
+}
+label {
+  padding: 10px 20px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+select {
+  padding: 10px;
+  margin: 0 5px 0 0;
+  color: #666666;
+  position: relative;
+  top: -1px;
+}
+/*========================================//
+	BUTTON STYLES
+//========================================*/
+.button-normal {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.button-large {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+/*===============================================//
+	OBJECT ABSTRACTIONS -
+	These will be made in less but pop them into 
+	classes if you need to use them
+//==============================================*/
+/*========================================//
+	NAVIGATION STYLES
+//========================================*/
+.filter-area {
+  display: none;
+}
+@-webkit-keyframes spin-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin-animation {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+.button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #ddd;
+  color: #666;
+  background: #f8f8f8;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.button:hover {
+  background: #ebebeb;
+  border: 1px solid #ebebeb;
+  color: #444;
+  border: 1px solid #d0d0d0;
+}
+.button:visited {
+  color: #666;
+}
+.button i {
+  line-height: 1.5em;
+}
+.button-primary {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #009fe3;
+  color: #fff;
+  background: #009fe3;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.button-primary:hover {
+  background: #17baff;
+  border: 1px solid #17baff;
+}
+.button-primary:visited {
+  color: #fff;
+}
+.button-primary i {
+  line-height: 1.5em;
+}
+.button-secondary {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #88c425;
+  color: #fff;
+  background: #88c425;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.button-secondary:hover {
+  background: #b6e36c;
+  border: 1px solid #b6e36c;
+}
+.button-secondary:visited {
+  color: #fff;
+}
+.button-secondary i {
+  line-height: 1.5em;
+}
+.button-cancel {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0 0 0 0;
+  border: 1px solid #df151a;
+  color: #fff;
+  background: #df151a;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "source-sans-pro", sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.button-cancel:hover {
+  background: #f1696c;
+  border: 1px solid #f1696c;
+}
+.button-cancel:visited {
+  color: #fff;
+}
+.button-cancel i {
+  line-height: 1.5em;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown > a,
+.dropdown > .button,
+.dropdown > .button-primary,
+.dropdown > .button-secondary,
+.dropdown > .button-cancel {
+  position: relative;
+}
+.dropdown > a:after,
+.dropdown > .button:after,
+.dropdown > .button-primary:after,
+.dropdown > .button-secondary:after,
+.dropdown > .button-cancel:after {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f0d7";
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+.dropdown > ul {
+  margin: 0 0 0 0;
+  padding: 5px 0 5px 0;
+  position: absolute;
+  top: 80%;
+  border: 1px solid #eee;
+  opacity: 0;
+  display: none;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  background: #fff;
+  z-index: 1000;
+}
+.dropdown > ul li {
+  list-style-type: none;
+}
+.dropdown > ul li.divider {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 5px 0;
+}
+.dropdown > ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #666;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  font-weight: 300;
+}
+.dropdown > ul li a:hover {
+  background: #eee;
+  color: #444;
+}
+.dropdown > ul .dropdown {
+  position: relative;
+}
+.dropdown > ul .dropdown > a,
+.dropdown > ul .dropdown > .button,
+.dropdown > ul .dropdown > .button-primary,
+.dropdown > ul .dropdown > .button-secondary,
+.dropdown > ul .dropdown .button-cancel {
+  position: relative;
+}
+.dropdown > ul .dropdown > a:after,
+.dropdown > ul .dropdown > .button:after,
+.dropdown > ul .dropdown > .button-primary:after,
+.dropdown > ul .dropdown > .button-secondary:after,
+.dropdown > ul .dropdown .button-cancel:after {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f0da";
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+.dropdown > ul .dropdown ul {
+  margin: 0 0 0 0;
+  padding: 5px 0 5px 0;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  border: 1px solid #eee;
+  opacity: 0;
+  display: none;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  background: #fff;
+  z-index: 1000;
+}
+.dropdown > ul .dropdown ul li {
+  list-style-type: none;
+}
+.dropdown > ul .dropdown ul li.divider {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 5px 0;
+}
+.dropdown > ul .dropdown ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #666;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  font-weight: 300;
+}
+.dropdown > ul .dropdown ul li a:hover {
+  background: #eee;
+  color: #444;
+}
+.dropdown > ul .dropdown:hover > ul {
+  opacity: 1;
+  display: block;
+  left: 100%;
+}
+.dropdown > ul .dropdown-left > a,
+.dropdown > ul .dropdown-left > .button,
+.dropdown > ul .dropdown-left > .button-primary,
+.dropdown > ul .dropdown-left > .button-secondary,
+.dropdown > ul .dropdown-left .button-cancel {
+  position: relative;
+}
+.dropdown > ul .dropdown-left > a:before,
+.dropdown > ul .dropdown-left > .button:before,
+.dropdown > ul .dropdown-left > .button-primary:before,
+.dropdown > ul .dropdown-left > .button-secondary:before,
+.dropdown > ul .dropdown-left .button-cancel:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f0d9";
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+.dropdown > ul .dropdown-left > a:after,
+.dropdown > ul .dropdown-left > .button:after,
+.dropdown > ul .dropdown-left > .button-primary:after,
+.dropdown > ul .dropdown-left > .button-secondary:after,
+.dropdown > ul .dropdown-left .button-cancel:after {
+  display: none;
+}
+.dropdown > ul .dropdown-left > ul {
+  left: -100% !important;
+}
+.dropdown > ul .dropdown-left > ul .dropdown > a,
+.dropdown > ul .dropdown-left > ul .dropdown > .button,
+.dropdown > ul .dropdown-left > ul .dropdown > .button-primary,
+.dropdown > ul .dropdown-left > ul .dropdown > .button-secondary,
+.dropdown > ul .dropdown-left > ul .dropdown .button-cancel {
+  position: relative;
+}
+.dropdown > ul .dropdown-left > ul .dropdown > a:before,
+.dropdown > ul .dropdown-left > ul .dropdown > .button:before,
+.dropdown > ul .dropdown-left > ul .dropdown > .button-primary:before,
+.dropdown > ul .dropdown-left > ul .dropdown > .button-secondary:before,
+.dropdown > ul .dropdown-left > ul .dropdown .button-cancel:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f0d9";
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+.dropdown > ul .dropdown-left > ul .dropdown > a:after,
+.dropdown > ul .dropdown-left > ul .dropdown > .button:after,
+.dropdown > ul .dropdown-left > ul .dropdown > .button-primary:after,
+.dropdown > ul .dropdown-left > ul .dropdown > .button-secondary:after,
+.dropdown > ul .dropdown-left > ul .dropdown .button-cancel:after {
+  display: none;
+}
+.dropdown > ul .dropdown-left > ul .dropdown > ul {
+  left: -100% !important;
+}
+.dropdown > ul .dropdown-right > a,
+.dropdown > ul .dropdown-right > .button,
+.dropdown > ul .dropdown-right > .button-primary,
+.dropdown > ul .dropdown-right > .button-secondaryt,
+.dropdown > ul .dropdown-right > .button-cancel {
+  position: relative;
+}
+.dropdown > ul .dropdown-right > a:before,
+.dropdown > ul .dropdown-right > .button:before,
+.dropdown > ul .dropdown-right > .button-primary:before,
+.dropdown > ul .dropdown-right > .button-secondaryt:before,
+.dropdown > ul .dropdown-right > .button-cancel:before {
+  display: none;
+}
+.dropdown > ul .dropdown-right > a:after,
+.dropdown > ul .dropdown-right > .button:after,
+.dropdown > ul .dropdown-right > .button-primary:after,
+.dropdown > ul .dropdown-right > .button-secondaryt:after,
+.dropdown > ul .dropdown-right > .button-cancel:after {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f0d9";
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+.dropdown > ul .dropdown-right > ul {
+  left: 100% !important;
+}
+.dropdown > ul .dropdown-right > ul .dropdown > a,
+.dropdown > ul .dropdown-right > ul .dropdown > .button,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-primary,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-secondaryt,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-cancel {
+  position: relative;
+}
+.dropdown > ul .dropdown-right > ul .dropdown > a:before,
+.dropdown > ul .dropdown-right > ul .dropdown > .button:before,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-primary:before,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-secondaryt:before,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-cancel:before {
+  display: none;
+}
+.dropdown > ul .dropdown-right > ul .dropdown > a:after,
+.dropdown > ul .dropdown-right > ul .dropdown > .button:after,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-primary:after,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-secondaryt:after,
+.dropdown > ul .dropdown-right > ul .dropdown > .button-cancel:after {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f0d9";
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+.dropdown > ul .dropdown-right > ul .dropdown > ul {
+  left: 100% !important;
+}
+.dropdown.active > ul {
+  opacity: 1;
+  display: block;
+  top: 100%;
+}
+.input-group {
+  display: block;
+  width: 100%;
+  margin: 24px 0;
+}
+.input-group:before,
+.input-group:after {
+  content: " ";
+  display: table;
+}
+.input-group:after {
+  clear: both;
+}
+.input-group label {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: right;
+  padding: 15px 20px;
+}
+.input-group input[type="text"],
+.input-group input[type="tel"],
+.input-group input[type="search"],
+.input-group input[type="email"],
+.input-group .input-prepend,
+.input-group .input-append,
+.input-group textarea,
+.input-group input[type="password"] {
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-group input[type="submit"],
+.input-group button,
+.input-group input[type="button"] {
+  margin-left: 25%;
+}
+.input-append {
+  position: relative;
+}
+.input-append:before,
+.input-append:after {
+  content: " ";
+  display: table;
+}
+.input-append:after {
+  clear: both;
+}
+.input-append input,
+.input-append textarea {
+  float: left;
+  display: block;
+}
+.input-append .add-on {
+  float: left;
+}
+.input-append button.add-on,
+.input-append input[type="submit"].add-on,
+.input-append .button.add-on,
+.input-append .button-primary.add-on,
+.input-append .button-secondary.add-on,
+.input-append .button-cancel-add-on {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-append i.add-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
+}
+.input-append i.add-on + input,
+.input-append i.add-on + textarea {
+  padding-left: 40px;
+}
+.input-append .dropdown {
+  float: left;
+}
+.input-append .dropdown > .button-secondary,
+.input-append .dropdown > .button,
+.input-append .dropdown > .button-primary,
+.input-append .dropdown > .button-cancel {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-append label {
+  float: left;
+  padding: 15px 20px;
+}
+.input-prepend {
+  position: relative;
+}
+.input-prepend:before,
+.input-prepend:after {
+  content: " ";
+  display: table;
+}
+.input-prepend:after {
+  clear: both;
+}
+.input-prepend input,
+.input-prepend textarea {
+  float: left;
+  display: block;
+}
+.input-prepend .add-on {
+  float: left;
+}
+.input-prepend button.add-on,
+.input-prepend input[type="submit"].add-on,
+.input-prepend .button.add-on,
+.input-prepend .button-primary.add-on,
+.input-prepend .button-secondary.add-on,
+.input-prepend .button-cancel-add-on {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-prepend i.add-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
+}
+.input-prepend i.add-on + input,
+.input-prepend i.add-on + textarea {
+  padding-left: 40px;
+}
+.input-prepend .dropdown {
+  float: left;
+}
+.input-prepend .dropdown > .button-secondary,
+.input-prepend .dropdown > .button,
+.input-prepend .dropdown > .button-primary,
+.input-prepend .dropdown > .button-cancel {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-prepend label {
+  float: left;
+  padding: 15px 20px;
+}
+.input-prepend:before,
+.input-prepend:after {
+  content: " ";
+  display: table;
+}
+.input-prepend:after {
+  clear: both;
+}
+.input-prepend input,
+.input-prepend textarea {
+  float: left;
+  display: block;
+}
+.input-prepend .add-on {
+  float: left;
+}
+.input-prepend button.add-on,
+.input-prepend input[type="submit"].add-on,
+.input-prepend .button.add-on,
+.input-prepend .button-primary.add-on,
+.input-prepend .button-secondary.add-on,
+.input-prepend .button-cancel-add-on {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-prepend i.add-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
+}
+.input-prepend i.add-on + input,
+.input-prepend i.add-on + textarea {
+  padding-left: 40px;
+}
+.input-prepend .dropdown {
+  float: left;
+}
+.input-prepend .dropdown > .button-secondary,
+.input-prepend .dropdown > .button,
+.input-prepend .dropdown > .button-primary,
+.input-prepend .dropdown > .button-cancel {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-prepend label {
+  float: left;
+  padding: 15px 20px;
+}
+.input-append-9-3 {
+  position: relative;
+}
+.input-append-9-3:before,
+.input-append-9-3:after {
+  content: " ";
+  display: table;
+}
+.input-append-9-3:after {
+  clear: both;
+}
+.input-append-9-3 input,
+.input-append-9-3 textarea {
+  display: block;
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-append-9-3 .add-on {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-append-9-3 button.add-on,
+.input-append-9-3 input[type="submit"].add-on,
+.input-append-9-3 .button.add-on,
+.input-append-9-3 .button-primary.add-on,
+.input-append-9-3 .button-secondary.add-on,
+.input-append-9-3 .button-cancel-add-on {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-append-9-3 i.add-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
+}
+.input-append-9-3 i.add-on + input,
+.input-append-9-3 i.add-on + textarea {
+  padding-left: 40px;
+}
+.input-append-9-3 .dropdown {
+  float: left;
+}
+.input-append-9-3 .dropdown > .button-secondary,
+.input-append-9-3 .dropdown > .button,
+.input-append-9-3 .dropdown > .button-primary,
+.input-append-9-3 .dropdown > .button-cancel {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-append-9-3 label {
+  float: left;
+  padding: 15px 20px;
+}
+.input-prepend-3-9 {
+  position: relative;
+}
+.input-prepend-3-9:before,
+.input-prepend-3-9:after {
+  content: " ";
+  display: table;
+}
+.input-prepend-3-9:after {
+  clear: both;
+}
+.input-prepend-3-9 input,
+.input-prepend-3-9 textarea {
+  display: block;
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-prepend-3-9 .add-on {
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-prepend-3-9 button.add-on,
+.input-prepend-3-9 input[type="submit"].add-on,
+.input-prepend-3-9 .button.add-on,
+.input-prepend-3-9 .button-primary.add-on,
+.input-prepend-3-9 .button-secondary.add-on,
+.input-prepend-3-9 .button-cancel-add-on {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-prepend-3-9 i.add-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 14px 15px 13px 15px;
+  z-index: 100;
+}
+.input-prepend-3-9 i.add-on + input,
+.input-prepend-3-9 i.add-on + textarea {
+  padding-left: 40px;
+}
+.input-prepend-3-9 .dropdown {
+  float: left;
+}
+.input-prepend-3-9 .dropdown > .button-secondary,
+.input-prepend-3-9 .dropdown > .button,
+.input-prepend-3-9 .dropdown > .button-primary,
+.input-prepend-3-9 .dropdown > .button-cancel {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  padding: 9px 20px 10px 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-prepend-3-9 label {
+  float: left;
+  padding: 15px 20px;
+}
+.vertical-form label,
+.vertical-form input,
+.vertical-form textarea {
+  display: block;
+  width: 100%;
+}
+.vertical-form label {
+  padding-left: 0;
+}
+.vertical-form input {
+  margin-bottom: 10px;
+}
+.vertical-form input[type="submit"],
+.vertical-form button,
+.vertical-form input[type="button"] {
+  margin-top: 24px;
+  display: inline-block;
+  width: auto;
+}
+.vertical-form textarea {
+  max-width: 100%;
+}
+/*
+	<form class=".vertical-form">
+		<label>Name</label>
+		<input type="text" plceholder="Enter your Name">
+
+		<label>Email</label>
+		<input type="email" plceholder="Enter your Email">
+
+		<label>Message</label>
+		<textarea></textarea>
+
+		<input type="submit" value="Send"/>
+	<form>	
+*/
+.horizontal-form .input-group {
+  display: block;
+  width: 100%;
+  margin: 24px 0;
+}
+.horizontal-form .input-group:before,
+.horizontal-form .input-group:after {
+  content: " ";
+  display: table;
+}
+.horizontal-form .input-group:after {
+  clear: both;
+}
+.horizontal-form label {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: right;
+  padding: 15px 20px;
+}
+.horizontal-form input[type="text"],
+.horizontal-form input[type="tel"],
+.horizontal-form input[type="search"],
+.horizontal-form input[type="email"],
+.horizontal-form .input-prepend,
+.horizontal-form .input-append,
+.horizontal-form textarea,
+.horizontal-form input[type="password"] {
+  width: 75%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.horizontal-form .input-append input[type="text"],
+.horizontal-form .input-prepend input[type="text"],
+.horizontal-form .input-append input[type="tel"],
+.horizontal-form .input-prepend input[type="tel"],
+.horizontal-form .input-append input[type="search"],
+.horizontal-form .input-prepend input[type="search"],
+.horizontal-form .input-append input[type="email"],
+.horizontal-form .input-prepend input[type="email"],
+.horizontal-form .input-append textarea,
+.horizontal-form .input-prepend textarea,
+.horizontal-form .input-append input[type="password"],
+.horizontal-form .input-prepend input[type="password"] {
+  width: 100%;
+}
+.horizontal-form input[type="submit"],
+.horizontal-form button,
+.horizontal-form input[type="button"] {
+  margin-left: 25%;
+}
+/*
+	<form class="horizontal-form">
+		<div class="input-group">
+			<label for="">Name</label>
+			<div class="input-append">
+				<input type="text">
+				<a href="#" class="button-primary add-on">Find</a>
+			</div>
+		</div>
+		<div class="input-group">
+			<label for="">Email</label>
+			<input type="text">
+		</div>
+		<div class="input-group">
+			<label for="">Message</label>
+			<textarea></textarea>
+		</div>
+		<input type="submit" value="Send">
+	</form>
+*/.modal {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  height: 450px;
+  margin: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  z-index: 2000;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal .modal-title {
+  position: relative;
+}
+.modal .modal-title span {
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 18px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+.modal .modal-title i {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  padding: 20px 20px;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+}
+.modal .modal-title i:hover {
+  color: #009fe3;
+}
+.modal.show {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.modal.show ~ .modal-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-small {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 33.333333333333336%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  height: 450px;
+  margin: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  z-index: 2000;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal-small .modal-title {
+  position: relative;
+}
+.modal-small .modal-title span {
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 18px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+.modal-small .modal-title i {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  padding: 20px 20px;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-small .modal-title i:hover {
+  color: #009fe3;
+}
+.modal-small.show {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.modal-small.show ~ .modal-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-large {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 66.66666666666667%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  height: 450px;
+  margin: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  z-index: 2000;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal-large .modal-title {
+  position: relative;
+}
+.modal-large .modal-title span {
+  width: 100%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 18px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+.modal-large .modal-title i {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  padding: 20px 20px;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-large .modal-title i:hover {
+  color: #009fe3;
+}
+.modal-large.show {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.modal-large.show ~ .modal-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-overlay {
+  visibility: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+/*
+	<div class="modal">
+		<div class="modal-title">
+			<span>The Title</span>
+			<i class="icon-remove"></i>
+		</div>
+		<div class="modal-content">
+			//Content here
+		</div>
+	</div>
+*/
+.bread-crumb {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.bread-crumb:before,
+.bread-crumb:after {
+  content: " ";
+  display: table;
+}
+.bread-crumb:after {
+  clear: both;
+}
+.bread-crumb > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.bread-crumb > li a {
+  display: block;
+}
+.bread-crumb > li {
+  float: left;
+}
+.bread-crumb > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.bread-crumb > li a:hover {
+  color: #fff;
+}
+.bread-crumb li a {
+  padding: 5px 0;
+  margin-left: 10px;
+}
+.bread-crumb li a:before {
+  content: "\f105";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-right: 10px;
+}
+.bread-crumb li a:hover {
+  background: transparent;
+  color: #009fe3;
+  text-decoration: underline;
+}
+.bread-crumb li a:hover:before {
+  color: #666;
+}
+.bread-crumb li:first-child a:before {
+  display: none;
+}
+.striped-odd tbody tr:nth-child(odd) {
+  background: #f0f0f0;
+}
+.striped-even tbody tr:nth-child(even) {
+  background: #f0f0f0;
+}
+.classic {
+  border: 2px solid #f0f0f0;
+}
+.classic td,
+.classic th {
+  border: 2px solid #f0f0f0;
+}
+.contrast {
+  border: 2px solid #f0f0f0;
+}
+.contrast thead {
+  background: #4aabff;
+}
+.contrast th {
+  color: #fff;
+  border: 2px solid #fff;
+}
+.contrast td {
+  border: 2px solid #f0f0f0;
+}
+.classic-horizontal {
+  border-bottom: 1px solid #f0f0f0;
+}
+.classic-horizontal th {
+  border-bottom: 2px solid #f0f0f0;
+}
+.classic-horizontal td {
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+}
+.classic-horizontal tr:hover td {
+  color: #666;
+  background: #f8f8f8;
+}
+.tool-bar {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.tool-bar:before,
+.tool-bar:after {
+  content: " ";
+  display: table;
+}
+.tool-bar:after {
+  clear: both;
+}
+.tool-bar > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.tool-bar > li a {
+  display: block;
+}
+.tool-bar > li {
+  float: left;
+}
+.tool-bar > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.tool-bar > li a:hover {
+  color: #fff;
+}
+.tool-bar > li a {
+  color: #666;
+  font-size: 14px;
+}
+.tool-bar > li a:hover {
+  color: #fff;
+}
+.tool-bar > .divider {
+  border-left: 1px solid #ddd;
+  margin: 0 0;
+  height: 34px;
+}
+.tool-bar > .dropdown {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.tool-bar > .dropdown + .dropdown {
+  border-left: none;
+}
+.menu-bar {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.menu-bar:before,
+.menu-bar:after {
+  content: " ";
+  display: table;
+}
+.menu-bar:after {
+  clear: both;
+}
+.menu-bar > li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.menu-bar > li a {
+  display: block;
+}
+.menu-bar > li {
+  float: left;
+}
+.menu-bar > li a {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #666;
+}
+.menu-bar > li a:hover {
+  color: #fff;
+}
+.menu-bar > .dropdown.active > a {
+  background: #009fe3;
+  color: #fff;
+}
+.menu-bar > .dropdown a:after {
+  display: none;
+}
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #009fe3;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.top-bar a.menu {
+  display: block;
+  position: relative;
+  top: -1px;
+  width: 24px;
+  height: 24px;
+  padding: 9px;
+  color: white;
+  font-size: 24px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.top-bar a.menu:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.top-bar input[type=search] {
+  height: 29px;
+  width: 550px;
+  position: absolute;
+  top: 5px;
+  left: 47px;
+  border: 0;
+  border-radius: 2px;
+  padding: 1px;
+  font-weight: 300;
+  font-size: 14px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.top-bar input[type=search]:focus {
+  border: 0;
+}
