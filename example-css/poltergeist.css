@@ -382,6 +382,126 @@ select {
 .button-cancel i {
   line-height: 1.5em;
 }
+.button-small {
+  font-size: 12px;
+  padding: 10px;
+}
+.button-normal {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.button-large {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.button-group:before,
+.button-group:after {
+  content: " ";
+  display: table;
+}
+.button-group:after {
+  clear: both;
+}
+.button-group > .button,
+.button-group > .dropdown,
+.button-group > .button-group,
+.button-group > .button-primary,
+.button-group > .button-secondary,
+.button-group > .button-cancel {
+  float: left;
+  margin: 0 5px;
+}
+.button-group-join:before,
+.button-group-join:after {
+  content: " ";
+  display: table;
+}
+.button-group-join:after {
+  clear: both;
+}
+.button-group-join > .button,
+.button-group-join > .dropdown,
+.button-group-join > .button-group,
+.button-group-join > .button-primary,
+.button-group-join > .button-secondary,
+.button-group-join > .button-cancel {
+  float: left;
+  border-radius: 0;
+}
+.button-group-join > .button:first-child,
+.button-group-join > .dropdown:first-child,
+.button-group-join > .button-group:first-child,
+.button-group-join > .button-primary:first-child,
+.button-group-join > .button-secondary:first-child,
+.button-group-join > .button-cancel:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.button-group-join > .button:first-child > .button,
+.button-group-join > .dropdown:first-child > .button,
+.button-group-join > .button-group:first-child > .button,
+.button-group-join > .button-primary:first-child > .button,
+.button-group-join > .button-secondary:first-child > .button,
+.button-group-join > .button-cancel:first-child > .button,
+.button-group-join > .button:first-child > .button-primary,
+.button-group-join > .dropdown:first-child > .button-primary,
+.button-group-join > .button-group:first-child > .button-primary,
+.button-group-join > .button-primary:first-child > .button-primary,
+.button-group-join > .button-secondary:first-child > .button-primary,
+.button-group-join > .button-cancel:first-child > .button-primary,
+.button-group-join > .button:first-child > .button-secondary,
+.button-group-join > .dropdown:first-child > .button-secondary,
+.button-group-join > .button-group:first-child > .button-secondary,
+.button-group-join > .button-primary:first-child > .button-secondary,
+.button-group-join > .button-secondary:first-child > .button-secondary,
+.button-group-join > .button-cancel:first-child > .button-secondary,
+.button-group-join > .button:first-child > .button-cancel,
+.button-group-join > .dropdown:first-child > .button-cancel,
+.button-group-join > .button-group:first-child > .button-cancel,
+.button-group-join > .button-primary:first-child > .button-cancel,
+.button-group-join > .button-secondary:first-child > .button-cancel,
+.button-group-join > .button-cancel:first-child > .button-cancel {
+  border-radius: 3px 0 0 3px;
+}
+.button-group-join > .button:last-child,
+.button-group-join > .dropdown:last-child,
+.button-group-join > .button-group:last-child,
+.button-group-join > .button-primary:last-child,
+.button-group-join > .button-secondary:last-child,
+.button-group-join > .button-cancel:last-child {
+  border-radius: 0 3px 3px 0;
+}
+.button-group-join > .button:last-child > .button,
+.button-group-join > .dropdown:last-child > .button,
+.button-group-join > .button-group:last-child > .button,
+.button-group-join > .button-primary:last-child > .button,
+.button-group-join > .button-secondary:last-child > .button,
+.button-group-join > .button-cancel:last-child > .button,
+.button-group-join > .button:last-child > .button-primary,
+.button-group-join > .dropdown:last-child > .button-primary,
+.button-group-join > .button-group:last-child > .button-primary,
+.button-group-join > .button-primary:last-child > .button-primary,
+.button-group-join > .button-secondary:last-child > .button-primary,
+.button-group-join > .button-cancel:last-child > .button-primary,
+.button-group-join > .button:last-child > .button-secondary,
+.button-group-join > .dropdown:last-child > .button-secondary,
+.button-group-join > .button-group:last-child > .button-secondary,
+.button-group-join > .button-primary:last-child > .button-secondary,
+.button-group-join > .button-secondary:last-child > .button-secondary,
+.button-group-join > .button-cancel:last-child > .button-secondary,
+.button-group-join > .button:last-child > .button-cancel,
+.button-group-join > .dropdown:last-child > .button-cancel,
+.button-group-join > .button-group:last-child > .button-cancel,
+.button-group-join > .button-primary:last-child > .button-cancel,
+.button-group-join > .button-secondary:last-child > .button-cancel,
+.button-group-join > .button-cancel:last-child > .button-cancel {
+  border-radius: 0 3px 3px 0;
+}
+.button-group-join > .dropdown > .button,
+.button-group-join > .dropdown > .button-primary,
+.button-group-join > .dropdown > .button-secondary,
+.button-group-join > .dropdown > .button-cancel {
+  borer-radius: 0;
+}
 .dropdown {
   position: relative;
 }
