@@ -1,0 +1,207 @@
+@import "../less/ghostly.less"; //Import Ghostly
+
+//Common Layout Classes
+
+.row {
+	.clearfix();
+	.full();
+}
+
+.quarter {
+	.quarter();
+}
+
+.third {
+	.third();
+}
+
+.half {
+	.half();
+}
+
+.two-thirds {
+	.two-thirds();
+}
+
+.three-quarters {
+	.three-quarters();
+}
+
+.full {
+	.full();
+}
+
+//Template Styling
+
+.wrapper {
+	.columns(10);
+	.push(1);
+	padding: @gutter*2 0;
+}
+
+//Hero Section
+.hero {
+	background: @base;
+	padding: @gutter*2;
+
+	h1 {
+		color: #fff;
+		text-align: center;
+		margin: @baseFontSize*1.5 0;
+	}
+}
+
+.wrapper {
+	p, h1, h2, h3 ,h4 {
+		.gutter();
+	}
+}
+
+//=====================================Form Classes==================================
+
+.input-prepend {
+	.input-prepend();
+}
+
+.input-append {
+	.input-append();
+}
+
+.input-group {
+	.input-group();
+}
+
+.horizontal-form {
+	.horizontal-form();
+
+	.input-group {
+		.input-append {
+			.input-append(9,3);
+		}
+	}
+}
+
+//====================================Modal Window Classes============================
+
+.buttons {
+	padding-top: 50px;
+	.gutter();
+	.button {
+		.button-primary();
+		.button-normal();
+	}
+}
+
+.modal, .modal-warning {
+		.modal();
+	}
+
+.modal-warning {
+	.modal-title {
+		span {
+			background: #F54828;
+			color: #fff;
+		}
+
+		i {
+			color: #fff;
+
+			&:hover {
+				color: #333;
+			}
+		}
+	}
+}
+
+.modal-overlay {
+	.modal-overlay();
+}
+
+//================================Button Example Styles=============================
+
+.button {
+	.button();
+	.button-normal();
+}
+
+.button-primary {
+	.button-primary();
+	.button-normal();
+}
+
+.button-secondary {
+	.button-secondary();
+	.button-normal();
+}
+
+.button-cancel {
+	.button-cancel();
+	.button-normal();
+}
+
+.button-small {
+	.button-small();
+}
+
+.button-normal {
+	.button-normal();
+}
+
+.button-large {
+	.button-large();
+}
+
+//==============================Dropdown Classes====================================
+
+.dropdown {
+	.dropdown();
+	ul {
+		width: 200px;
+	}
+}
+
+//============================Button Groups========================================
+
+.button-group {
+	.button-group();
+	margin-right: 20px;
+	float:left;
+}
+
+.button-group-join {
+	.button-group-join();
+	float:left;
+	margin-right: 20px;
+}
+
+//============================Toolbars=============================================
+
+.toolbar {
+	.toolbar();
+}
+
+.menubar {
+	.menu-bar();
+}
+
+//============================Navigations=========================================
+
+.inline-nav {
+	.inline-nav();
+}
+
+.bread-crumb {
+	.bread-crumb();
+}
+
+//============================Loading Animations==================================
+
+.loading-spinner {
+	.loading-spinner();
+}
+
+.loading-bar-wrapper {
+	.loading-bar-wrapper();
+}
+
+

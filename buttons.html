@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+	<head>
+		<title>Ghostly | The framework that doesn't appear to be there.</title>
+		<link rel="stylesheet" href="example-css/index.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7:all.js"></script>
+		<script>
+			$(document).ready(function(e){
+				$('.dropdown').click(function(e){
+					e.preventDefault();
+
+					$(this).toggleClass('active');
+				})
+			});
+		</script>
+		<div class="row hero">
+			<h1>Buttons</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="third">
+					<h4>Button Types</h4>
+					<p>Buttons are made using simple classes of<p> 
+					<ul>
+						<li>.button</li>
+						<li>.button-primary</li>
+						<li>.button-secondary</li>
+						<li>.button-cancel</li>
+					</ul>
+					<a href="#" class="button">Default</a>
+					<a class="button-primary" href="">Primary</a>
+					<a  class="button-secondary" href="">Secondary</a>
+					<a class="button-cancel" href="">Cancel</a>
+				</div>
+				<div class="third">
+					<h4>Button Sizes</h4>
+					<p>You can then additionally control their size with</p>
+					<ul>
+						<li>.button-small</li>
+						<li>.button-normal (default if you don't apply a size class)</li>
+						<li>.button-large</li>
+					</ul>
+					<a class="button-primary button-small" href="">Small</a>
+					<a  class="button-secondary" href="">Normal</a>
+					<a class="button-cancel button-large" href="">Large</a>
+				</div>
+				<div class="third">
+					<h4>Button Dropdown</h4>
+					<p>The dropdown class can be applied to style buttons also see more on <a href="dropdowns.html">Dropdowns</a></p>
+					<div class="dropdown">
+						<a href="#" class="button">Open Me</a>
+						<ul>
+							<li><a href="dropdowns.html">View Dropdown Docs</a></li>
+							<li><a href="#">Option 2</a></li>
+							<li><a href="#">Option 3</a></li>
+							<li><a href="#">Export</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="half">
+					<h2>Button Groups Explained</h2>
+					<p>A Button Group is used to group buttons together(Obvious I know). They should be used when you want to seperate buttons apart from one another. They are used to join buttons inside a button group together allowing you to group similar buttons or actions together.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="half">
+					<h4>Button Groups</h4>
+					<div class="button-group">
+						<div class="dropdown">
+							<a href="#" class="button-primary">Create</a>
+							<ul>
+								<li><a href="#">Report</a></li>
+								<li><a href="#">Audit</a></li>
+								<li><a href="#">Template</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="button-group">
+						<a href="#" class="button-primary">New</a>
+						<a href="" class="button-secondary">Rename</a>
+						<a href="#" class="button-cancel">Delete</a>
+					</div>
+					<div class="button-group">
+						<a href="#" class="button-primary">Sort</a>
+					</div>
+				</div>
+
+				<div class="half">
+					<h4>Button Groups (Joined)</h4>
+					<div class="button-group">
+						<div class="dropdown">
+							<a href="#" class="button-primary">Create</a>
+							<ul>
+								<li><a href="#">Report</a></li>
+								<li><a href="#">Audit</a></li>
+								<li><a href="#">Template</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="button-group-join">
+						<a href="#" class="button-primary">New</a>
+						<a href="" class="button-secondary">Rename</a>
+						<a href="#" class="button-cancel">Delete</a>
+					</div>
+					<div class="button-group">
+						<a href="#" class="button-primary">Sort</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

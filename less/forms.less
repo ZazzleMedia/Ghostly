@@ -24,9 +24,9 @@ textarea {
 
 }
 
-input[type="submit"], button {
-	.button(primary);
-	.button-size();
+input[type="submit"], button, input[type="button"] {
+	.button-primary();
+	.button-normal();
 	.transition(all 0.3s);
 }
 
@@ -46,50 +46,117 @@ select {
 	top:-1px;
 }
 
-
-//stylings for inputs
-.input-group-button(@buttonLength: auto; @inputLength: auto; @float: left) {
-	.border-box();
-	.clearfix();
-	input, {
-		float:left;
-		display: block;
-	}
-
-	input[type="text"],input[type="tel"],input[type="search"], input[type="email"] {
-		.columns(@inputLength);
-	}
-
-	input[type="submit"] {
-		.columns(@buttonLength);
-		float: @float;
-	}
-}
-
-.input-group-icon() {
+.input-prepend(@addOnCols: auto; @inputCols: auto) {
 	.clearfix();
 	position: relative;
-	width: 100%;
-	input, span {
-		float:left;
+	input, textarea {
+		float: left;
 		display: block;
+		.columns(@inputCols);
 	}
 
-	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], input[type="password"], textarea {
-		width: 100%;
-		padding-left: (@gutter*2)+5+@baseFontSize;
-
-		&:focus ~ span i {
-			color: @base;
-		}
+	.add-on {
+		display: block;
+		float: left;
+		.columns(@addOnCols);
 	}
 
-	span {
-		text-align:center;
-		padding: (@gutter+4) (@gutter+5);
+	button.add-on, input[type="submit"].add-on, .button.add-on, .button-primary.add-on, .button-secondary.add-on, .button-cancel-add-on {
+		.border-radius(3px 0 0 3px);
+	}
+
+	i.add-on {
 		position: absolute;
 		top:0;
 		left:0;
+		padding: @gutter+4 @gutter+5 @gutter+3 @gutter+5;
+		z-index:100;
+	}
+
+	i.add-on + input, i.add-on + textarea {
+		padding-left: 40px;
+	}
+
+	.dropdown {
+		float:left;
+		> .button-secondary, > .button, > .button-primary, > .button-cancel {
+			.border-radius(3px 0 0 3px);
+			padding: (@gutter)-1 @gutter*2 @gutter @gutter*2;
+			width: 100%;
+			.border-box();
+		}
+	}
+
+	label {
+		float:left;
+		padding: (@gutter)+5 @gutter*2;
+	}	
+}
+
+.input-append(@inputCols: auto; @addOnCols: auto) {
+	.clearfix();
+	position: relative;
+	input, textarea {
+		float: left;
+		display: block;
+		.columns(@inputCols);
+	}
+
+	.add-on {
+		float: left;
+		.columns(@addOnCols);
+	}
+
+	button.add-on, input[type="submit"].add-on, .button.add-on, .button-primary.add-on, .button-secondary.add-on, .button-cancel-add-on {
+		.border-radius(0 3px 3px 0);
+	}
+
+	i.add-on {
+		position: absolute;
+		top:0;
+		left:0;
+		padding: @gutter+4 @gutter+5 @gutter+3 @gutter+5;
+		z-index:100;
+	}
+
+	i.add-on + input, i.add-on + textarea {
+		padding-left: 40px;
+	}
+
+	.dropdown {
+		float:left;
+		> .button-secondary, > .button, > .button-primary, > .button-cancel {
+			.border-radius(0 3px 3px 0);
+			padding: (@gutter)-1 @gutter*2 @gutter @gutter*2;
+			width:100%;
+			.border-box();
+		}
+	}
+
+	label {
+		float:left;
+		padding: (@gutter)+5 @gutter*2;
+	}		
+}
+
+.input-group() {
+	display: block;
+	width:100%;
+	.clearfix();
+	margin: @baseFontSize*1.5 0;
+
+	label {
+		.columns(3);
+		text-align: right;
+		padding: @gutter+5 @gutter*2;
+	}
+
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], .input-prepend, .input-append, textarea, input[type="password"] {
+		.columns(9);
+	}
+
+	input[type="submit"], button, input[type="button"] {
+		.push(3);
 	}
 }
 	
@@ -109,7 +176,7 @@ select {
 		margin-bottom: 10px;
 	}
 
-	input[type="submit"] {
+	input[type="submit"], button, input[type="button"] {
 		margin-top: @baseFontSize*1.5;
 		display:inline-block;
 		width:auto;
@@ -122,7 +189,7 @@ select {
 }
 
 .horizontal-form() {
-	.form-group {
+	.input-group {
 		display: block;
 		width: 100%;
 		.clearfix();
@@ -135,17 +202,17 @@ select {
 		padding: @gutter+5 @gutter*2;
 	}
 
-	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], .input-icon, textarea {
+	input[type="text"],input[type="tel"],input[type="search"], input[type="email"], .input-prepend, .input-append, textarea, input[type="password"] {
 		.columns(9);
 	}
 
-	.input-icon {
-		input[type="text"],input[type="tel"],input[type="search"], input[type="email"], textarea {
+	.input-append, .input-prepend {
+		input[type="text"],input[type="tel"],input[type="search"], input[type="email"], textarea, input[type="password"] {
 			width: 100%;
 		}
 	}
 
-	input[type="submit"] {
+	input[type="submit"], button, input[type="button"] {
 		.push(3);
 	}
 }
@@ -157,11 +224,11 @@ select {
 }
 
 .has-success() {
-
+	
 }
 
 .has-warning() {
-
+	
 }
 
 

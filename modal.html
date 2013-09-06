@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+	<head>
+		<title>Ghostly | The framework that doesn't appear to be there.</title>
+		<link rel="stylesheet" href="example-css/index.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7:all.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				$('#set-up').click(function(e){
+					e.preventDefault();
+					$('.modal-warning').hide();
+					$('.modal').addClass('show');
+
+					$(window).bind('keydown', function(e){
+						if (e.keycode == 27) {
+							$('.modal').removeClass('show');
+							$('.modal').unbind('click');
+							$(window).unbind('keydown');
+						}
+					});
+
+					$('.close').click(function(e){
+						$('.modal').removeClass('show');
+						$('.close').unbind('click');
+						$('.modal-warning').show();
+					});
+				});
+
+				$('#warning').click(function(e){
+					e.preventDefault();
+					$('.modal-warning').addClass('show');
+
+					$(window).bind('keydown', function(e){
+						if (e.keyCode == 27) {
+							$('.modal-warning').removeClass('show');
+							$('.modal-warning').unbind('click');
+							$(window).unbind('keydown');
+						}
+					});
+
+					$('.close').click(function(e){
+						$('.modal-warning').removeClass('show');
+						$('.close').unbind('click');
+					});
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="row hero">
+			<h1>Modal Windows</h1>
+		</div>
+		<div class="wrapper">
+			<div class="half">
+				<h4>Click on the buttons to try out the various Modal Pop-Up Windows</h4>
+			</div>
+			<div class="half buttons">
+				<a id="set-up" href="#" class="button">SetUp Modal</a>
+				<a id="warning" href="#" class="button">Warning Modal</a>
+			</div>
+		</div>
+		<div class="modal">
+			<div class="modal-title">
+				<span>Page Set Up</span><i class="icon-remove close"></i>
+				<div class="modal-content">
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-warning">
+			<div class="modal-title">
+				<span>Warning</span><i class="icon-remove close"></i>
+			</div>
+			<div class="modal-content">
+				
+			</div>
+		</div>
+		<div class="modal-overlay"></div>
+	</body>
+</html>

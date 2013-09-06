@@ -1,0 +1,220 @@
+//Dropdowns
+
+.dropdown() {
+	position: relative;
+
+	> a, > .button, > .button-primary, > .button-secondary, > .button-cancel {
+    	position: relative;
+
+		    &:after {
+		      display: inline-block;
+		      font-family: FontAwesome;
+		      content:"\f0d7";
+		      margin-left: @gutter;
+		      position: relative;
+		      top:2px;
+		    }
+  	}
+
+ > ul {
+  	margin:0 0 0 0;
+  	padding: 5px 0 5px 0;
+  	position: absolute;
+  	top:80%;
+  	border: 1px solid #eee;
+  	opacity:0;
+  	display: none;
+  	.transition(all 0.8s);
+  	background: #fff;
+  	z-index:1000;
+  	
+  	li {
+  		list-style-type: none;
+
+	  	&.divider {
+	  		border-top:1px solid #eee;
+	  		border-bottom: 1px solid #eee;
+	  		margin: @gutter/2 0;
+	  	}
+
+	  		a {
+	  			display: block;
+	  			width: 100%;
+	  			height: 100%;
+	  			color: #666;
+	  			.border-box();
+	  			padding: @gutter/2;
+	  			font-weight: 300;
+
+		  			&:hover {
+						background: #eee;
+						color: #444;
+		  			}
+	  		}
+	  	}
+
+	.dropdown {
+	position: relative;
+
+			> a, > .button, > .button-primary, > .button-secondary, .button-cancel {
+				position: relative;
+
+				&:after {
+			      display: inline-block;
+			      font-family: FontAwesome;
+			      content:"\f0da";
+			      margin-left: @gutter;
+			      position: relative;
+			      top:2px;
+			    }
+			}
+
+			ul {
+		  	margin:0 0 0 0;
+		  	padding: 5px 0 5px 0;
+		  	position: absolute;
+		  	top:-@gutter/2;
+		  	left:80%;
+		  	border: 1px solid #eee;
+		  	opacity:0;
+		  	display: none;
+		  	.transition(all 0.8s);
+		  	background: #fff;
+		  	z-index:1000;
+		  	
+		  	li {
+		  		list-style-type: none;
+
+			  	&.divider {
+			  		border-top:1px solid #eee;
+			  		border-bottom: 1px solid #eee;
+			  		margin: @gutter/2 0;
+			  	}
+
+			  		a {
+			  			display: block;
+			  			width: 100%;
+			  			height: 100%;
+			  			color: #666;
+			  			.border-box();
+			  			padding: @gutter/2;
+			  			font-weight: 300;
+
+				  			&:hover {
+								background: #eee;
+								color: #444;
+				  			}
+			  		}
+			  	}
+		  	}
+
+		  &:hover {
+			> ul {
+				opacity:1;
+				display: block;
+				left: 100%;
+			}
+		  }
+		}
+
+		.dropdown-left {
+			> a, > .button, > .button-primary, > .button-secondary, .button-cancel {
+				position: relative;
+
+				&:before {
+			      display: inline-block;
+			      font-family: FontAwesome;
+			      content:"\f0d9";
+			      margin-right: @gutter;
+			      position: relative;
+			      top:2px;
+			    }
+
+			    &:after {
+			    	display: none;
+			    }
+			}
+
+			> ul {
+				left: -100% !important;
+
+				.dropdown {
+					> a, > .button, > .button-primary, > .button-secondary, .button-cancel {
+						position: relative;
+
+						&:before {
+					      display: inline-block;
+					      font-family: FontAwesome;
+					      content:"\f0d9";
+					      margin-right: @gutter;
+					      position: relative;
+					      top:2px;
+					    }
+
+					    &:after {
+					    	display: none;
+					    }
+					}
+
+					> ul {
+						left: -100% !important;
+					}
+				}
+			}	
+		} 
+
+		.dropdown-right {
+			> a, > .button, > .button-primary, > .button-secondaryt, > .button-cancel {
+				position: relative;
+
+				&:before {
+					display:none;
+				}
+
+				&:after {
+					display: inline-block;
+					      font-family: FontAwesome;
+					      content:"\f0d9";
+					      margin-left: @gutter;
+					      position: relative;
+					      top:2px;
+				}
+			}
+
+			> ul {
+				left: 100% !important;
+
+				.dropdown {
+					> a, > .button, > .button-primary, > .button-secondaryt, > .button-cancel {
+						position: relative;
+
+						&:before {
+							display:none;
+						}
+
+						&:after {
+							display: inline-block;
+							      font-family: FontAwesome;
+							      content:"\f0d9";
+							      margin-left: @gutter;
+							      position: relative;
+							      top:2px;
+						}
+					}
+
+					> ul {
+						left: 100% !important;
+					}
+				}
+			}
+		} 	
+  	}
+
+  &.active {
+	> ul {
+		opacity:1;
+		display: block;
+		top: 100%;
+	}
+  }
+}
